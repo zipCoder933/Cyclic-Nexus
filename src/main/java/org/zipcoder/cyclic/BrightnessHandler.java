@@ -1,0 +1,50 @@
+//package org.zipcoder.cyclic;
+//
+//import net.minecraft.client.Minecraft;
+//import net.minecraftforge.client.event.RenderLevelStageEvent;
+//import net.minecraftforge.event.TickEvent;
+//import net.minecraftforge.eventbus.api.SubscribeEvent;
+//import net.minecraftforge.fml.common.Mod;
+//
+//@Mod.EventBusSubscriber(modid = "yourmodid", bus = Mod.EventBusSubscriber.Bus.MOD)
+//public class BrightnessHandler {
+//    @SubscribeEvent
+//    public static void onRenderTick(TickEvent.RenderTickEvent event) {
+//        Minecraft.getInstance().gameRenderer.lightTexture().turnOnLightLayer();
+//    }
+//
+//    @SubscribeEvent
+//    public static void onRenderLevelLast(RenderLevelStageEvent event) {
+//        event.getLevelRenderer().se
+//    }
+//
+//    public static void onHotkeyPress() {
+//        if (!(mc.f_91080_ instanceof ChatScreen)) {
+//            Options options = mc.f_91066_;
+//            if (initialGamma < 0.0D) {
+//                if (GameSettingsFunctions.getGamma(options) >= 1.0D) {
+//                    initialGamma = 1.0D;
+//                    GameSettingsFunctions.setGamma(options, 1.0D);
+//                } else {
+//                    initialGamma = GameSettingsFunctions.getGamma(options);
+//                }
+//            }
+//
+//            boolean fullBright = false;
+//            if (GameSettingsFunctions.getGamma(options) != initialGamma && GameSettingsFunctions.getGamma(options) != 15.0D) {
+//                initialGamma = GameSettingsFunctions.getGamma(options);
+//                fullBright = true;
+//            }
+//
+//            if (GameSettingsFunctions.getGamma(options) != initialGamma && !fullBright) {
+//                GameSettingsFunctions.setGamma(options, initialGamma);
+//                Util.saveLastStateToConfig(false);
+//            } else {
+//                GameSettingsFunctions.setGamma(options, 15.0D);
+//                Util.saveLastStateToConfig(true);
+//            }
+//
+//        }
+//    }
+//
+//}
