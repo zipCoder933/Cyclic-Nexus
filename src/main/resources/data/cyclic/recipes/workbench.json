@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CTC",
+    "CCC"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:crafting_table"
+    },
+    "C": {
+      "item": "cyclic:compressed_cobblestone"
+    }
+  },
+  "result": {
+    "item": "cyclic:workbench",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"parent": "cyclic:parent/scaffold",
+
+	"textures": {
+		"all": "cyclic:block/scaffold_fragile",
+		"particle": "cyclic:block/scaffold_fragile"
+	}
+}

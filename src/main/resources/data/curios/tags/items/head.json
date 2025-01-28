@@ -1,0 +1,9 @@
+{
+  "replace": "false",
+  "values": [
+     {"id":   "cyclic:glowing_helmet",                       "required":false}, 
+     {"id":   "cyclic:charm_antipotion","required":false}, 
+     {"id":   "cyclic:charm_boostpotion","required":false}, 
+     {"id":   "cyclic:charm_stone","required":false}
+  ]
+}

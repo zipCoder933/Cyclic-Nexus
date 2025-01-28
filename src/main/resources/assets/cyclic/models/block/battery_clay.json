@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "cyclic:block/machine/battery_clay",
+        "down": "cyclic:block/machine/battery_clay_top",
+        "up": "cyclic:block/machine/battery_clay_top",
+        "north": "cyclic:block/machine/battery_clay",
+        "south": "cyclic:block/machine/battery_clay",
+        "west": "cyclic:block/machine/battery_clay",
+        "east": "cyclic:block/machine/battery_clay"
+    }
+}

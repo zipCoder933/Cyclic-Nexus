@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ooo",
+    "oro",
+    "ooo"
+  ],
+  "key": {
+    "o": {
+      "tag": "forge:obsidian"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "cyclic:unbreakable_block",
+    "count": 4
+  }
+}

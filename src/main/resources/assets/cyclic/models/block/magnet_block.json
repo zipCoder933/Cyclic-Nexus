@@ -1,0 +1,7 @@
+{
+    "parent": "cyclic:parent/plate_small",
+  "render_type": "cutout_mipped",
+    "textures": {
+        "0": "cyclic:block/magnet/face_off"
+    }
+} 

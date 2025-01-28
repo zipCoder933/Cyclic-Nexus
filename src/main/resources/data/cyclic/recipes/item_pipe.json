@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "isi",
+    "   "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:bricks"
+    },
+    "i": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "cyclic:item_pipe",
+    "count": 4
+  }
+}

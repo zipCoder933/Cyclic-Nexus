@@ -1,0 +1,101 @@
+{
+    "__comment": "Copyright © InsomniaKitten 2017",
+    "multipart": [
+        {
+            "when": { "down": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy", "x": 90, "uvlock": true }
+        },
+        {
+            "when": { "down": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked", "x": 90, "uvlock": true }
+        },
+        {
+            "when": { "down": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy", "x": 90, "uvlock": true }
+        },
+        {
+            "when": { "up": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy", "x": 270, "uvlock": true }
+        },
+        {
+            "when": { "up": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked", "x": 270, "uvlock": true }
+        },
+        {
+            "when": { "up": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy", "x": 270, "uvlock": true }
+        },
+        {
+            "when": { "north": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy" }
+        },
+        {
+            "when": { "north": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked" }
+        },
+        {
+            "when":  { "north": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy" }
+        },
+        {
+            "when": { "south": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy", "y": 180, "uvlock": true }
+        },
+        {
+            "when": { "south": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked", "y": 180, "uvlock": true }
+        },
+        {
+            "when": { "south": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy", "y": 180, "uvlock": true }
+        },
+        {
+            "when": { "west": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy", "y": 270, "uvlock": true }
+        },
+        {
+            "when": { "west": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked", "y": 270, "uvlock": true }
+        },
+        {
+            "when": { "west": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy", "y": 270, "uvlock": true }
+        },
+        {
+            "when": { "east": "none" },
+            "apply": { "model": "cyclic:block/cable_none_energy", "y": 90, "uvlock": true }
+        },
+        {
+            "when": { "east": "blocked" },
+            "apply": { "model": "cyclic:block/cable_blocked", "y": 90, "uvlock": true }
+        },
+        {
+            "when": { "east": "inventory" },
+            "apply": { "model": "cyclic:block/cable_side_energy", "y": 90, "uvlock": true }
+        },
+        {
+            "when": { "east": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy", "y": 90, "uvlock": true }
+        },
+        {
+            "when": { "down": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy", "x": 90, "uvlock": true }
+        },
+        {
+            "when": { "up": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy", "x": 270, "uvlock": true }
+        },
+        {
+            "when": { "north": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy" }
+        },
+        {
+            "when": { "west": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy", "y": 270, "uvlock": true }
+        },
+        {
+            "when": { "south": "cable" },
+            "apply": { "model": "cyclic:block/cable_pump_energy", "y": 180, "uvlock": true }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "render_type": "cutout_mipped",
+	"parent": "block/cube",
+	"textures": {
+		"particle": "cyclic:block/glass/dark_island",
+		"down": "cyclic:block/glass/dark_news",
+		"up": "cyclic:block/glass/dark_news",
+		"north": "cyclic:block/glass/dark_ns",
+		"south": "cyclic:block/glass/dark_ns",
+		"west": "cyclic:block/glass/dark_ns",
+		"east": "cyclic:block/glass/dark_ns"
+	}
+}

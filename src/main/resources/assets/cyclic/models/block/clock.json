@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "cyclic:block/clock_off",
+        "down": "cyclic:block/clock_off",
+        "up": "cyclic:block/clock_off",
+        "north": "cyclic:block/clock_off",
+        "south": "cyclic:block/clock_off",
+        "west": "cyclic:block/clock_off",
+        "east": "cyclic:block/clock_off"
+    }
+}

@@ -1,0 +1,45 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"elements": [
+		{
+			"name": "base",
+			"from": [4, 0, 4],
+			"to": [12, 1, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 10, 1], "texture": "#1"},
+				"east": {"uv": [1, 2, 11, 3], "texture": "#1"},
+				"south": {"uv": [2, 1, 12, 2], "texture": "#1"},
+				"west": {"uv": [1, 2, 11, 3], "texture": "#1"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#1"},
+				"down": {"uv": [1, 2, 11, 12], "texture": "#1"}
+			}
+		},
+		{
+			"name": "PipeTall",
+			"from": [6, 6, 6],
+			"to": [10, 10, 10],
+			"faces": {
+				"north": {"uv": [6, 6, 10, 10], "texture": "#0"},
+				"east": {"uv": [6, 6, 10, 10], "texture": "#0"},
+				"south": {"uv": [6, 6, 10, 10], "texture": "#0"},
+				"west": {"uv": [6, 6, 10, 10], "texture": "#0"},
+				"up": {"uv": [6, 6, 10, 10], "texture": "#0"},
+				"down": {"uv": [6, 6, 10, 10], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"scale": [0.3, 0.3, 0.3]
+		}
+	}
+}

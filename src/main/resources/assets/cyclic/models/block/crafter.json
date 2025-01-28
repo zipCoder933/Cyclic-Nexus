@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "cyclic:block/crafter",
+        "down": "cyclic:block/crafter",
+        "up": "cyclic:block/crafter",
+        "north": "cyclic:block/crafter_side",
+        "south": "cyclic:block/crafter_side",
+        "west": "cyclic:block/crafter_side",
+        "east": "cyclic:block/crafter_side"
+    }
+}

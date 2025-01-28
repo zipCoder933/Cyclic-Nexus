@@ -1,0 +1,10 @@
+{
+   "parent": "cyclic:parent/anvil",
+  "render_type": "cutout_mipped",
+   "textures": {
+        "particle": "cyclic:block/anvil/hopper",
+        "body": "cyclic:block/anvil/iron",
+        "base": "cyclic:block/anvil/hopper",
+        "pillar": "cyclic:block/anvil/hopper"
+    }
+}

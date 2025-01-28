@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id":"cyclic:shears_obsidian","required":false},            
+    { "id":"cyclic:shears_flint","required":false}
+  ]
+}

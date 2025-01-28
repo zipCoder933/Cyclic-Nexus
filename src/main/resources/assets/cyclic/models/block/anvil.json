@@ -1,0 +1,10 @@
+{
+   "parent": "cyclic:parent/anvil",
+  "render_type": "cutout_mipped",
+   "textures": {
+        "particle": "cyclic:block/anvil/diamond",
+        "body": "cyclic:block/anvil/diamond",
+        "base": "cyclic:block/anvil/iron",
+        "pillar": "cyclic:block/anvil/iron"
+    }
+}

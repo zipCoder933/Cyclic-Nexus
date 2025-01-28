@@ -1,0 +1,7 @@
+{
+ 	"parent": "cyclic:parent/machine_vertical",
+	"textures":{
+        "base": "cyclic:block/machine/fluid",
+        "stem": "cyclic:block/machine/wood"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube_directional",
+	"textures": {
+		"particle": "cyclic:block/soil",
+		"down": "cyclic:block/soil",
+		"up": "cyclic:block/soil",
+		"north": "cyclic:block/soil",
+		"east": "cyclic:block/soil",
+		"south": "cyclic:block/soil",
+		"west": "cyclic:block/soil"
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "cyclic:block/ender_shelf_side",
+    "down": "cyclic:block/ender_shelf_side",
+    "up": "cyclic:block/ender_shelf_side",
+    "north": "cyclic:block/ender_shelf_front",
+    "south": "cyclic:block/ender_shelf_side",
+    "west": "cyclic:block/ender_shelf_side",
+    "east": "cyclic:block/ender_shelf_side"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "cyclic:parent/scaffold",
+	"textures": {
+		"all": "cyclic:block/scaffold_responsive",
+		"particle": "cyclic:block/scaffold_responsive"
+	}
+}

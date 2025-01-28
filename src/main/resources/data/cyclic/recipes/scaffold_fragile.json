@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SFS",
+    " S "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "S": {
+      "item": "minecraft:scaffolding"
+    }
+  },
+  "result": {
+    "item": "cyclic:scaffold_fragile",
+    "count": 2
+  }
+}

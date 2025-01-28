@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+   "BBB",
+   "IRI",
+   "IAI"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "A": {
+      "item": "minecraft:redstone"
+    },
+    "B": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "cyclic:generator_solar",
+    "count": 4
+  }
+}

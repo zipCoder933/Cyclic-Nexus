@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s",
+    "t"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:fire_charge"
+    },
+    "t": {
+      "item": "cyclic:spikes_iron"
+    }
+  },
+  "result": {
+    "item": "cyclic:spikes_fire",
+    "count": 1
+  }
+}

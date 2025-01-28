@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "OSO",
+    " O "
+  ],
+  "key": {
+    "S": {
+      "item": "cyclic:shield_bone"
+    },
+    "O": {
+      "item": "cyclic:gem_obsidian"
+    }
+  },
+  "result": {
+    "item": "cyclic:shield_obsidian"
+  }
+}

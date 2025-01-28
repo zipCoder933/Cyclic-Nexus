@@ -1,0 +1,6 @@
+{
+  "parent": "cyclic:block/my_water_candle_lit",
+  "textures": {
+    "sides": "cyclic:block/machine/green"
+  }
+}

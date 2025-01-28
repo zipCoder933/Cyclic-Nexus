@@ -1,0 +1,10 @@
+{
+	"parent":"cyclic:parent/node",
+  "render_type": "cutout_mipped",
+	"textures": {
+		"main": "cyclic:block/node/main_fluid",
+		"particle": "cyclic:block/node/main_fluid",
+		"plate_front": "cyclic:block/node/back_fluid",
+		"plate_back": "cyclic:block/node/back_fluid"
+	}
+}

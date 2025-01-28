@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "cyclic:soil",
+    "cyclic:terra_preta",
+    "cyclic:peat_baked",
+    "cyclic:peat_unbaked"
+  ]
+}

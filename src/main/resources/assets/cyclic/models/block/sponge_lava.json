@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "cyclic:block/sponge_lava",
+        "down": "cyclic:block/sponge_lava",
+        "up": "cyclic:block/sponge_lava",
+        "north": "cyclic:block/sponge_lava",
+        "south": "cyclic:block/sponge_lava",
+        "west": "cyclic:block/sponge_lava",
+        "east": "cyclic:block/sponge_lava"
+    }
+}

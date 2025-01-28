@@ -1,0 +1,9 @@
+{
+	"parent": "cyclic:block/fan_up",
+  "render_type": "cutout_mipped",
+
+	"textures": {
+		"body_side": "cyclic:block/fan/fan_body_side_on",
+		"blades": "cyclic:block/fan/fan_blades_on"
+	}
+}

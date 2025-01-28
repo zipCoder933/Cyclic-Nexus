@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "rlr",
+    "gqg",
+    "hhh"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:quartz"
+    },
+    "g": {
+      "tag": "forge:glass/colorless"
+    },
+    "r": {
+      "item": "minecraft:ice"
+    },
+    "h": {
+      "item": "minecraft:obsidian"
+    },
+    "q": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "cyclic:solidifier"
+  }
+}

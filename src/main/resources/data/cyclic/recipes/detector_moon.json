@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ggg",
+    "o o",
+    "ddd"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:daylight_detector"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "o": {
+      "item": "minecraft:observer"
+    }
+  },
+  "result": {
+    "item": "cyclic:detector_moon",
+    "count": 1
+  }
+}
