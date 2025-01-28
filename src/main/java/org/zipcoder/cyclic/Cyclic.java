@@ -67,7 +67,7 @@ public class Cyclic {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            GameSettingsFunctions.setFullbright();
         }
     }
 }
