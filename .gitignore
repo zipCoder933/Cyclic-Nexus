@@ -21,3 +21,5 @@ gradle-app.setting
 .classpath
 /run
 /run
+/run/
+run/logs/debug-1.log.gz

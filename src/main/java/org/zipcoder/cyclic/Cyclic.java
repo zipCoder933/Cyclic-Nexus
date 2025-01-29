@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.zipcoder.cyclic.events.EventHandler;
 import org.zipcoder.cyclic.item.ModItems;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -37,6 +38,7 @@ public class Cyclic {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(EventHandler.class);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -46,7 +48,7 @@ public class Cyclic {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(EventHandler.class);
     }
 
     // Add the example block item to the building blocks tab
@@ -67,7 +69,8 @@ public class Cyclic {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            GameSettingsFunctions.setFullbright();
+            //Register custom events
+            MinecraftForge.EVENT_BUS.register(EventHandler.class);
         }
     }
 }
