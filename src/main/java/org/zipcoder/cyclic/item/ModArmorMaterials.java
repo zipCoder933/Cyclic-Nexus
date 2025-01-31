@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic;
+package org.zipcoder.cyclic.item;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -6,15 +6,21 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import org.zipcoder.cyclic.Cyclic;
 
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
     GLOW_ARMOR("glowing",
-            15, // durability
-            new int[]{5, 7, 5, 4}, // protection
-            14, // enchantability
+            30, // durability
+            new int[]{ // protection
+                    3, // head
+                    7, // body
+                    5, // legs
+                    4, // feet
+            },
+            10, // enchantability
             SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
             1F, // toughness
             0F, // knockback resistance

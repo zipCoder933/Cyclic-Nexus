@@ -1,19 +1,16 @@
 package org.zipcoder.cyclic.utils;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.OptionInstance;
 import net.minecraft.client.Options;
 
 public class GameSettingsFunctions {
-
-    public static final double DEFAULT_GAMMA = 1.0D;
-    public static final double MIN_GAMMA = 0.0D;
-    public static final double MAX_GAMMA = 5.0D;
-
     private static final Minecraft mc = Minecraft.getInstance();
+    private static final OptionInstance<Double> gamma = mc.options.gamma();
 
-    public static void setGamma(double gamma) {
-        Options options = mc.options;
-        options.gamma().set(gamma);
+    public static void setGamma(double g) {
+        I_OptionInstance<Double> mixIn = (I_OptionInstance<Double>) (Object) gamma;
+        mixIn.setUnchecked(g);
     }
 
     public static double getGamma() {
@@ -21,4 +18,11 @@ public class GameSettingsFunctions {
         return options.gamma().get();
     }
 
+    public static double getGammaClamped() {
+        Options options = mc.options;
+        double value = options.gamma().get();
+        if (value < 0.0D) return 0.0D;
+        else if (value > 1.0D) return 1.0D;
+        else return value;
+    }
 }

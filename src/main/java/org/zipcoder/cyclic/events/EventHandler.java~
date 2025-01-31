@@ -42,7 +42,7 @@ public class EventHandler {
         //This event is only fired on the server side
         System.out.println("LivingEquipmentChangeEvent fired! ClientSide: " + event.getEntity().level().isClientSide);
         Player player = Minecraft.getInstance().player;//Get the local player
-        if (event.getEntity().level().isClientSide()) System.out.println("On the client!");
+        if (event.getEntity() != player) System.out.println("Not the local player!");
 
         // Check if the slot is the HEAD (helmet)
         if (event.getSlot() == EquipmentSlot.HEAD) {

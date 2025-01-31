@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "cyclic.refmap.json",
   "mixins": [
+    "OptionInstanceMixin"
   ],
   "client": [
   ],
