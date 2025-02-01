@@ -1346,7 +1346,7 @@
     "effect.cyclic.slowfall": "Slowfall",
     "effect.cyclic.snow": "Snow",
     "effect.cyclic.swimspeed": "Скорость плавания",
-    "effect.cyclic.stun": "Паралич",
+    "effect.cyclic.freeze": "Паралич",
     "effect.cyclic.waterwalk": "Waterwalking",
     
     "item.minecraft.potion.effect.cyclic_strong_haste": "Зелье спешки II",
@@ -1366,11 +1366,11 @@
     "item.minecraft.tipped_arrow.effect.cyclic_swimspeed": "Стрела с эффектом скорости плавания",
     "item.minecraft.potion.effect.cyclic_swimspeed.guide": "Зелье скорости плавания значительно увеличивает скорость цели при передвижении через жидкости.",
 
-    "item.minecraft.potion.effect.cyclic_stun": "Зелье паралича",
-    "item.minecraft.splash_potion.effect.cyclic_stun": "Взрывное зелье паралича",
-    "item.minecraft.lingering_potion.effect.cyclic_stun": "Туманное зелье паралича",
-    "item.minecraft.tipped_arrow.effect.cyclic_stun": "Стрела с эффектом паралича",
-    "item.minecraft.potion.effect.cyclic_stun.guide": "Зелье паралича полностью обездвиживает цель.",
+    "item.minecraft.potion.effect.cyclic_freeze": "Зелье паралича",
+    "item.minecraft.splash_potion.effect.cyclic_freeze": "Взрывное зелье паралича",
+    "item.minecraft.lingering_potion.effect.cyclic_freeze": "Туманное зелье паралича",
+    "item.minecraft.tipped_arrow.effect.cyclic_freeze": "Стрела с эффектом паралича",
+    "item.minecraft.potion.effect.cyclic_freeze.guide": "Зелье паралича полностью обездвиживает цель.",
 
 
 
@@ -1623,9 +1623,9 @@
     "item.cyclic.boomerang_carry.tooltip": "Бросайте, чтобы собрать предметы, которые он вам вернет",
     "item.cyclic.boomerang_carry.guide": "Бросайте, чтобы собрать предметы, которые он вам вернет",
 
-    "item.cyclic.boomerang_stun": "Волшебный бумеранг",
-    "item.cyclic.boomerang_stun.tooltip": "Собирает предметы и оглушает врагов",
-    "item.cyclic.boomerang_stun.guide": "Собирает предметы и оглушает врагов",
+    "item.cyclic.boomerang_freeze": "Волшебный бумеранг",
+    "item.cyclic.boomerang_freeze.tooltip": "Собирает предметы и оглушает врагов",
+    "item.cyclic.boomerang_freeze.guide": "Собирает предметы и оглушает врагов",
 
     "item.cyclic.boomerang_damage": "Заострённый бумеранг",
     "item.cyclic.boomerang_damage.tooltip": "Собирает предметы и атакует врагов",

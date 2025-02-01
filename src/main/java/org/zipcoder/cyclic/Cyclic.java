@@ -1,7 +1,6 @@
 package org.zipcoder.cyclic;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,9 +15,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
+import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventHandler;
 import org.zipcoder.cyclic.items.ItemRegistry;
+import org.zipcoder.cyclic.potions.PotionsRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Cyclic.MOD_ID)
@@ -36,6 +37,11 @@ public class Cyclic {
         ItemRegistry.register(modEventBus);
         BlockRegistry.register(modEventBus);
         EnchantmentRegistry.register(modEventBus);
+        EffectRegistry.register(modEventBus);
+
+        PotionsRegistry.setup();
+        PotionsRegistry.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
