@@ -25,6 +25,8 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
         // STONE? COPPER?
     }
 
+    public static final ResourceLocation BLOCKING = new ResourceLocation("minecraft:blocking");
+
     private ShieldType type;
 
     public ShieldCyclicItem(Item.Properties properties, ShieldType type) {
@@ -53,6 +55,13 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
         return 72000;
     }
 
+//    @Override
+//    public InteractionResultHolder<ItemStack> use(Level world, Player playerIn, InteractionHand hand) {
+//        ItemStack itemstack = playerIn.getItemInHand(hand);
+//        playerIn.startUsingItem(hand); //important for Blocking property
+//        return InteractionResultHolder.consume(itemstack);
+//    }
+//
     /**
      * A shield is technically an entity, so we need a custom renderer
      * @param consumer

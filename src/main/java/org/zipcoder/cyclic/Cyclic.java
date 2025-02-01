@@ -1,7 +1,6 @@
 package org.zipcoder.cyclic;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,7 +17,6 @@ import org.slf4j.Logger;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
 import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
-import org.zipcoder.cyclic.events.EventHandler;
 import org.zipcoder.cyclic.events.EventRegistry;
 import org.zipcoder.cyclic.items.ItemRegistry;
 import org.zipcoder.cyclic.potions.PotionsRegistry;
@@ -36,6 +34,7 @@ public class Cyclic {
 
     public Cyclic() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setupClient);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegistry.register(modEventBus);

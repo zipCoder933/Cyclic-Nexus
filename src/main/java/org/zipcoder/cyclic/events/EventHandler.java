@@ -51,26 +51,6 @@ public class EventHandler {
         }
     }
 
-
-//    To disable flight inertia
-//    public final static Vec3 defaultDelta = new Vec3(1, 1, 1);
-//    public final static Vec3 stillDelta = new Vec3(0.01, 0, 0.01);
-//    @SubscribeEvent
-//    public static void onClientTick(TickEvent.ClientTickEvent event) {
-////        ItemTags.TRIMMABLE_ARMOR
-//        if (event.phase == TickEvent.Phase.END) {
-//            Player player = Minecraft.getInstance().player;
-//            if (player != null) {//Important
-//                if (player.getAbilities().flying) {
-//                    // Force movement values to prevent inertia
-//                    player.setDeltaMovement(stillDelta);
-//                    player.setSpeed(100000000);
-//                    // player.noPhysics = true;
-//                }
-//            }
-//        }
-//    }
-
 //    private static double defaultGamma = 1.0D;
 //    public static ItemStack getHelmet(Player player) {
 //        return player.getItemBySlot(EquipmentSlot.HEAD);

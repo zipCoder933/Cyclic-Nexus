@@ -1,8 +1,10 @@
 package org.zipcoder.cyclic.items.shield;
 
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
+import org.zipcoder.cyclic.items.ItemRegistry;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 
@@ -17,4 +19,15 @@ public class MaterialShieldRegistry {
     public static final Material SHIELD_BASE_BONE_NOPATTERN = new Material(Sheets.SHIELD_SHEET, new ResourceLocation(MOD_ID, "entity/shield/bone_base_nopattern"));
     public static final Material SHIELD_BASE_OBSIDIAN = new Material(Sheets.SHIELD_SHEET, new ResourceLocation(MOD_ID, "entity/shield/obsidian_base"));
     public static final Material SHIELD_BASE_OBSIDIAN_NOPATTERN = new Material(Sheets.SHIELD_SHEET, new ResourceLocation(MOD_ID, "entity/shield/obsidian_base_nopattern"));
+
+    public static void initShields() {
+        //this matches up with ShieldCyclicItem where it calls startUsingItem() inside of use()
+        net.minecraft.client.renderer.item.ItemPropertyFunction blockFn = (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F;
+
+        ItemProperties.register(ItemRegistry.SHIELD_LEATHER.get(), ShieldCyclicItem.BLOCKING, blockFn);
+        ItemProperties.register(ItemRegistry.SHIELD_BONE.get(), ShieldCyclicItem.BLOCKING, blockFn);
+        ItemProperties.register(ItemRegistry.SHIELD_OBSIDIAN.get(), ShieldCyclicItem.BLOCKING, blockFn);
+    }
+
+
 }
