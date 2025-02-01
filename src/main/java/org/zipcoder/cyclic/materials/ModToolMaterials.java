@@ -22,7 +22,7 @@ public class ModToolMaterials {
             new ForgeTier(
                     1,
                     231,
-                    4.0F,
+                    Tiers.STONE.getSpeed(),
                     1.0F,
                     8,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
@@ -37,7 +37,7 @@ public class ModToolMaterials {
             new ForgeTier(
                     2,
                     260,
-                    6.3F,
+                    Tiers.IRON.getSpeed(), 
                     2.0F,
                     26,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
@@ -52,7 +52,7 @@ public class ModToolMaterials {
             new ForgeTier(
                     0,
                     260,
-                    12.0F,
+                    8.0F,
                     0.0F,
                     22,
 
