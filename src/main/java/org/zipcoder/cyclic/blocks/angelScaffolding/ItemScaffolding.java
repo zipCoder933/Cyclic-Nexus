@@ -1,6 +1,5 @@
-package org.zipcoder.cyclic.item.angelScaffolding;
+package org.zipcoder.cyclic.blocks.angelScaffolding;
 
-import com.lothrazar.library.util.ItemStackUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.Mth;
@@ -12,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import org.zipcoder.cyclic.utils.ItemStackUtil;
 
 public class ItemScaffolding extends BlockItem {
 

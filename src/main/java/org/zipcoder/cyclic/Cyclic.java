@@ -15,8 +15,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.zipcoder.cyclic.blocks.BlockRegistry;
+import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventHandler;
-import org.zipcoder.cyclic.item.ItemRegistry;
+import org.zipcoder.cyclic.items.ItemRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Cyclic.MOD_ID)
@@ -32,6 +34,8 @@ public class Cyclic {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegistry.register(modEventBus);
+        BlockRegistry.register(modEventBus);
+        EnchantmentRegistry.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -53,9 +57,7 @@ public class Cyclic {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ItemRegistry.GLOW_HELMET);
-        }
+        ItemRegistry.addToCreative(event);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -30,7 +30,7 @@ glintSpeed:0.5
 glintStrength:0.75
 damageTiltStrength:1.0
 highContrast:false
-renderDistance:2
+renderDistance:13
 simulationDistance:5
 entityDistanceScaling:1.0
 guiScale:0

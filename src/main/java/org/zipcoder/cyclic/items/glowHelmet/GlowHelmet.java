@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.item.glowHelmet;
+package org.zipcoder.cyclic.items.glowHelmet;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;

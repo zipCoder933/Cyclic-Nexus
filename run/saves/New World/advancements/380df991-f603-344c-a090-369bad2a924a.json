@@ -37,8 +37,12 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:skeleton": "2025-02-01 07:20:48 -0700",
+      "minecraft:creeper": "2025-02-01 07:20:50 -0700",
       "minecraft:wither": "2025-01-22 19:42:04 -0700",
-      "minecraft:slime": "2025-01-22 19:41:24 -0700"
+      "minecraft:slime": "2025-01-22 19:41:24 -0700",
+      "minecraft:ender_dragon": "2025-02-01 07:18:41 -0700",
+      "minecraft:zombie": "2025-02-01 07:17:46 -0700"
     },
     "done": false
   },
@@ -207,6 +211,36 @@
   "minecraft:nether/create_beacon": {
     "criteria": {
       "beacon": "2025-01-27 17:59:42 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2025-02-01 07:18:00 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2025-02-01 07:18:00 -0700"
+    },
+    "done": true
+  },
+  "minecraft:end/root": {
+    "criteria": {
+      "entered_end": "2025-02-01 07:18:13 -0700"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_end": {
+    "criteria": {
+      "entered_end": "2025-02-01 07:18:13 -0700"
+    },
+    "done": true
+  },
+  "minecraft:end/kill_dragon": {
+    "criteria": {
+      "killed_dragon": "2025-02-01 07:18:41 -0700"
     },
     "done": true
   },

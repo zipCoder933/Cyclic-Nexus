@@ -1,12 +1,16 @@
-package org.zipcoder.cyclic.item;
+package org.zipcoder.cyclic.items;
 
 import net.minecraft.world.item.*;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.zipcoder.cyclic.Cyclic;
-import org.zipcoder.cyclic.item.glowHelmet.GlowHelmet;
+import org.zipcoder.cyclic.blocks.BlockRegistry;
+import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
+import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
+import org.zipcoder.cyclic.items.shield.ShieldCyclicItem;
 import org.zipcoder.cyclic.materials.ModArmorMaterials;
 import org.zipcoder.cyclic.materials.ModToolMaterials;
 
@@ -36,7 +40,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_CHESTPLATE = ITEMS.register("emerald_chestplate", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_LEGGINGS = ITEMS.register("emerald_leggings", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-    
+
     public static final RegistryObject<Item> EMERALD_SHOVEL = ITEMS.register("emerald_shovel", () -> new ShovelItem(ModToolMaterials.EMERALD, 1.5F, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_HOE = ITEMS.register("emerald_hoe", () -> new HoeItem(ModToolMaterials.EMERALD, -4, 0F, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_SWORD = ITEMS.register("emerald_sword", () -> new SwordItem(ModToolMaterials.EMERALD, 3, -2.4F, (new Item.Properties())));
@@ -54,12 +58,68 @@ public class ItemRegistry {
 //    public static final RegistryObject<Item> CRYSTAL_PICKAXE = ITEMS.register("crystal_pickaxe", () -> new PickaxeItem(ModToolMaterials.GEMOBSIDIAN, 1, -2.8F, new Item.Properties()));
 //    public static final RegistryObject<Item> CRYSTAL_AXE = ITEMS.register("crystal_axe", () -> new AxeItem(ModToolMaterials.GEMOBSIDIAN, 5.0F, -3.0F, new Item.Properties()));
 
+    //Shields (Basically just regular shields with more durability)
+    //Shield tier is as follows: Flint, Leather, Bone, Obsidian
+    //A vanilla shield has 336 durability
+    private static final int VANILLA_SHIELD_DURABILITY = 336;
+
+    //More durable than vanilla shield
+    public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 1.25f)), ShieldCyclicItem.ShieldType.LEATHER));
+
+    //More durable than leather shield
+    public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 1.75f)), ShieldCyclicItem.ShieldType.BONE));
+
+    //Most durable
+    public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 4f)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+
+
     //Creative gear
     public static final RegistryObject<Item> CREATIVE_SWORD = ITEMS.register("creative_sword", () -> new SwordItem(ModToolMaterials.CREATIVE, 3, -2.4F, (new Item.Properties())));
 
 
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+    }
+
+    public static void addToCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ItemRegistry.GLOW_HELMET);
+        } else if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ItemRegistry.SHIELD_LEATHER);
+            event.accept(ItemRegistry.SHIELD_BONE);
+            event.accept(ItemRegistry.SHIELD_OBSIDIAN);
+
+            event.accept(ItemRegistry.COPPER_SWORD);
+            event.accept(ItemRegistry.AMETHYST_SWORD);
+            event.accept(ItemRegistry.EMERALD_SWORD);
+
+            event.accept(ItemRegistry.EMERALD_BOOTS);
+            event.accept(ItemRegistry.EMERALD_HELMET);
+            event.accept(ItemRegistry.EMERALD_CHESTPLATE);
+            event.accept(ItemRegistry.EMERALD_LEGGINGS);
+
+            event.accept(ItemRegistry.CREATIVE_SWORD);
+        } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ItemRegistry.COPPER_SHOVEL);
+            event.accept(ItemRegistry.COPPER_HOE);
+            event.accept(ItemRegistry.COPPER_PICKAXE);
+            event.accept(ItemRegistry.COPPER_AXE);
+
+            event.accept(ItemRegistry.AMETHYST_SHOVEL);
+            event.accept(ItemRegistry.AMETHYST_HOE);
+            event.accept(ItemRegistry.AMETHYST_PICKAXE);
+            event.accept(ItemRegistry.AMETHYST_AXE);
+
+            event.accept(ItemRegistry.EMERALD_SHOVEL);
+            event.accept(ItemRegistry.EMERALD_HOE);
+            event.accept(ItemRegistry.EMERALD_PICKAXE);
+            event.accept(ItemRegistry.EMERALD_AXE);
+        } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ItemRegistry.SCAFFOLD_FRAGILE);
+            event.accept(ItemRegistry.SCAFFOLD_RESPONSIVE);
+        }
     }
 }

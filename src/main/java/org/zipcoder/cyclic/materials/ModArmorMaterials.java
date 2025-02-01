@@ -37,7 +37,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
                     1, // boots
             },
             30, // enchantability
-            SoundEvents.ARMOR_EQUIP_GOLD, // equip sound
+            SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
             0.25F, // toughness
             0F, // knockback resistance
             () -> Ingredient.of(Items.EMERALD_BLOCK)); // repair material

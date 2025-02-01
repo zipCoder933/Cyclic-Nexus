@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.item.angelScaffolding;
+package org.zipcoder.cyclic.blocks.angelScaffolding;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -22,7 +22,6 @@ public class BlockScaffoldingResponsive extends BlockScaffolding {
     }
 
     @Override
-    @Deprecated
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         //If we are crouching, place instead of replacing
         if (player.isCrouching()) return super.use(state, world, pos, player, hand, hit);

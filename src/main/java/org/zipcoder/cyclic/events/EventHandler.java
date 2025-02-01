@@ -9,8 +9,8 @@ import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.zipcoder.cyclic.Cyclic;
-import org.zipcoder.cyclic.item.ItemRegistry;
-import org.zipcoder.cyclic.item.glowHelmet.GlowHelmet;
+import org.zipcoder.cyclic.items.ItemRegistry;
+import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.utils.GameSettingsFunctions;
 
 

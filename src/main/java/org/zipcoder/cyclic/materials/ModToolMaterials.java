@@ -8,7 +8,6 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
-import org.zipcoder.cyclic.item.ItemRegistry;
 
 import java.util.List;
 
