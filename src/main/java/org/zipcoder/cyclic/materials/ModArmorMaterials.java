@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.item;
+package org.zipcoder.cyclic.materials;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -24,7 +24,23 @@ public enum ModArmorMaterials implements ArmorMaterial {
             SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
             1F, // toughness
             0F, // knockback resistance
-            () -> Ingredient.of(Items.GOLD_BLOCK)); // repair material
+            () -> Ingredient.of(Items.GOLD_BLOCK)), // repair material
+
+    //ArmorMaterials.GOLD.getDurabilityForType(ArmorItem.Type.HELMET)
+    //Emerald is gold but with a higher durability, toughness and enchantment value
+    EMERALD_ARMOR("emerald",
+            25, // durability
+            new int[]{ // protection
+                    2, // helmtet
+                    5, // chestplate
+                    3, // leggings
+                    1, // boots
+            },
+            30, // enchantability
+            SoundEvents.ARMOR_EQUIP_GOLD, // equip sound
+            0.25F, // toughness
+            0F, // knockback resistance
+            () -> Ingredient.of(Items.EMERALD_BLOCK)); // repair material
 
     private final String name;
     private final int durabilityMultiplier;

@@ -1,7 +1,6 @@
 package org.zipcoder.cyclic.events;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -10,7 +9,7 @@ import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.zipcoder.cyclic.Cyclic;
-import org.zipcoder.cyclic.item.ModItems;
+import org.zipcoder.cyclic.item.ItemRegistry;
 import org.zipcoder.cyclic.item.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.utils.GameSettingsFunctions;
 
@@ -51,12 +50,12 @@ public class EventHandler {
             ItemStack newHelmet = event.getTo();
 
             // If the custom helmet is equipped, increase gamma
-            if (newHelmet.getItem() == ModItems.GLOW_HELMET.get()) {
+            if (newHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()) {
                 System.out.println("Custom helmet equipped! Adjusting gamma...");
                 defaultGamma = GameSettingsFunctions.getGammaClamped();
                 GameSettingsFunctions.setGamma(GlowHelmet.MAX_GAMMA); // Set high gamma
-            } else if (oldHelmet.getItem() == ModItems.GLOW_HELMET.get()
-                    && newHelmet.getItem() != ModItems.GLOW_HELMET.get()) {
+            } else if (oldHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()
+                    && newHelmet.getItem() != ItemRegistry.GLOW_HELMET.get()) {
                 System.out.println("Custom helmet removed! Resetting gamma...");
                 GameSettingsFunctions.setGamma(defaultGamma); // Default gamma
             }

@@ -2,7 +2,7 @@ package org.zipcoder.cyclic.item.glowHelmet;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
-import org.zipcoder.cyclic.item.ModArmorMaterials;
+import org.zipcoder.cyclic.materials.ModArmorMaterials;
 
 public class GlowHelmet extends ArmorItem {
     public static final double MAX_GAMMA = 5.0;
