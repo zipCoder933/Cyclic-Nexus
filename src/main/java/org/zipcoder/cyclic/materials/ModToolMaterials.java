@@ -22,9 +22,9 @@ public class ModToolMaterials {
             new ForgeTier(
                     Tiers.STONE.getLevel(),
                     (int) (Tiers.STONE.getUses() * 1.5f),
-                    Tiers.STONE.getSpeed() * 1.5f,
-                    Tiers.STONE.getAttackDamageBonus() * 1.5f,
-                    Tiers.IRON.getEnchantmentValue() * 1,
+                    Tiers.STONE.getSpeed() * 1,
+                    Tiers.STONE.getAttackDamageBonus() * 1,
+                    (int) (Tiers.STONE.getEnchantmentValue() * 1.5f),
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
                     () -> Ingredient.of(Items.COPPER_INGOT)),
             new ResourceLocation(MOD_ID, "copper"),

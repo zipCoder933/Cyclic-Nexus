@@ -46,38 +46,35 @@ public class EventHandler {
         }
     }
 
-    private static double defaultGamma = 1.0D;
-    public static ItemStack getHelmet(Player player) {
-        return player.getItemBySlot(EquipmentSlot.HEAD);
-    }
-
-
-
-    @SubscribeEvent
-    public static void onHelmetChange(LivingEquipmentChangeEvent event) {
-        //This event is only fired on the server side
-        System.out.println("LivingEquipmentChangeEvent fired! ClientSide: " + event.getEntity().level().isClientSide);
-        Player player = Minecraft.getInstance().player;//Get the local player
-        if (event.getEntity().level().isClientSide()) System.out.println("On the client!");
-
-        // Check if the slot is the HEAD (helmet)
-        if (event.getSlot() == EquipmentSlot.HEAD) {
-            System.out.println("Head slot changed!");
-            ItemStack oldHelmet = event.getFrom();
-            ItemStack newHelmet = event.getTo();
-
-            // If the custom helmet is equipped, increase gamma
-            if (newHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()) {
-                System.out.println("Custom helmet equipped! Adjusting gamma...");
-                defaultGamma = GameSettingsFunctions.getGammaClamped();
-                GameSettingsFunctions.setGamma(GlowHelmet.MAX_GAMMA); // Set high gamma
-            } else if (oldHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()
-                    && newHelmet.getItem() != ItemRegistry.GLOW_HELMET.get()) {
-                System.out.println("Custom helmet removed! Resetting gamma...");
-                GameSettingsFunctions.setGamma(defaultGamma); // Default gamma
-            }
-        }
-    }
+//    private static double defaultGamma = 1.0D;
+//    public static ItemStack getHelmet(Player player) {
+//        return player.getItemBySlot(EquipmentSlot.HEAD);
+//    }
+//    @SubscribeEvent
+//    public static void onHelmetChange(LivingEquipmentChangeEvent event) {
+//        //This event is only fired on the server side
+//        System.out.println("LivingEquipmentChangeEvent fired! ClientSide: " + event.getEntity().level().isClientSide);
+//        Player player = Minecraft.getInstance().player;//Get the local player
+//        if (event.getEntity().level().isClientSide()) System.out.println("On the client!");
+//
+//        // Check if the slot is the HEAD (helmet)
+//        if (event.getSlot() == EquipmentSlot.HEAD) {
+//            System.out.println("Head slot changed!");
+//            ItemStack oldHelmet = event.getFrom();
+//            ItemStack newHelmet = event.getTo();
+//
+//            // If the custom helmet is equipped, increase gamma
+//            if (newHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()) {
+//                System.out.println("Custom helmet equipped! Adjusting gamma...");
+//                defaultGamma = GameSettingsFunctions.getGammaClamped();
+//                GameSettingsFunctions.setGamma(GlowHelmet.MAX_GAMMA); // Set high gamma
+//            } else if (oldHelmet.getItem() == ItemRegistry.GLOW_HELMET.get()
+//                    && newHelmet.getItem() != ItemRegistry.GLOW_HELMET.get()) {
+//                System.out.println("Custom helmet removed! Resetting gamma...");
+//                GameSettingsFunctions.setGamma(defaultGamma); // Default gamma
+//            }
+//        }
+//    }
 
 
 //    @SubscribeEvent
