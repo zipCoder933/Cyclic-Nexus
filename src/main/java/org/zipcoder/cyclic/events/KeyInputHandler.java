@@ -7,6 +7,7 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
+import org.zipcoder.cyclic.utils.ClientUtils;
 import org.zipcoder.cyclic.utils.GameSettingsFunctions;
 
 /**
@@ -23,24 +24,14 @@ public class KeyInputHandler {
             System.out.println("Custom key pressed!");
             if (GameSettingsFunctions.getGamma() > 1.0D) {
                 GameSettingsFunctions.setGamma(defaultGamma);
-                showToast("Cyclic", "Night Vision Disabled");
+                ClientUtils.showToast("Night Vision", "Night Vision Disabled");
             } else {
                 defaultGamma = GameSettingsFunctions.getGammaClamped();
                 GameSettingsFunctions.setGamma(GlowHelmet.MAX_GAMMA);
-                showToast("Cyclic", "Night Vision Enabled");
+                ClientUtils.showToast("Night Vision", "Night Vision Enabled");
             }
         }
     }
 
-    public static void showToast(String title, String message) {
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.player != null) {
-            SystemToast toast = new SystemToast(
-                    SystemToast.SystemToastIds.TUTORIAL_HINT, // Toast Type
-                    Component.literal(title),
-                    Component.literal(message)
-            );
-            mc.getToasts().addToast(toast);
-        }
-    }
+
 }
