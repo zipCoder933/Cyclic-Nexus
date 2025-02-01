@@ -7,6 +7,7 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import org.zipcoder.cyclic.Cyclic;
+import org.zipcoder.cyclic.sound.SoundRegistry;
 
 import java.util.function.Supplier;
 
@@ -37,7 +38,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
                     1, // boots
             },
             30, // enchantability
-            SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
+            SoundRegistry.EQUIP_EMERALD.get(), // equip sound
             0.25F, // toughness
             0F, // knockback resistance
             () -> Ingredient.of(Items.EMERALD_BLOCK)); // repair material

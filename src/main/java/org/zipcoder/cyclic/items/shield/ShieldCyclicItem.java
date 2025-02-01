@@ -1,5 +1,6 @@
 package org.zipcoder.cyclic.items.shield;
 
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.common.ToolActions;
 
@@ -46,14 +48,17 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
         return 72000;
     }
 
-//    @Override
-//    public void initializeClient(java.util.function.Consumer<IClientItemExtensions> consumer) {
-//        consumer.accept(new IClientItemExtensions() {
-//
-//            @Override
-//            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-//                return ShieldBlockEntityWithoutLevelRenderer.instance;
-//            }
-//        });
-//    }
+    /**
+     * A shield is technically an entity, so we need a custom renderer
+     * @param consumer
+     */
+    @Override
+    public void initializeClient(java.util.function.Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
+            @Override
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return ShieldBlockEntityWithoutLevelRenderer.instance;
+            }
+        });
+    }
 }

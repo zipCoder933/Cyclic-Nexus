@@ -48,6 +48,12 @@ public class ItemRegistry {
     public static final RegistryObject<Item> EMERALD_AXE = ITEMS.register("emerald_axe", () -> new AxeItem(ModToolMaterials.EMERALD, 5.0F, -3.0F, new Item.Properties()));
 
 
+    //    public static final RegistryObject<Item> SPIKES_DIAMOND = ITEMS.register("spikes_diamond", () -> new BlockItem(BlockRegistry.SPIKES_DIAMOND.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SPIKES_IRON = ITEMS.register("spikes_iron", () -> new BlockItem(BlockRegistry.SPIKES_IRON.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SPIKES_CURSE = ITEMS.register("spikes_curse", () -> new BlockItem(BlockRegistry.SPIKES_CURSE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SPIKES_FIRE = ITEMS.register("spikes_fire", () -> new BlockItem(BlockRegistry.SPIKES_FIRE.get(), new Item.Properties()));
+
+
 //    public static final RegistryObject<Item> CRYSTAL_BOOTS = ITEMS.register("crystal_boots", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.BOOTS, new Item.Properties()));
 //    public static final RegistryObject<Item> CRYSTAL_HELMET = ITEMS.register("crystal_helmet", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.HELMET, new Item.Properties()));
 //    public static final RegistryObject<Item> CRYSTAL_CHESTPLATE = ITEMS.register("crystal_chestplate", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
@@ -88,21 +94,28 @@ public class ItemRegistry {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ItemRegistry.GLOW_HELMET);
         } else if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ItemRegistry.SHIELD_LEATHER);
-            event.accept(ItemRegistry.SHIELD_BONE);
-            event.accept(ItemRegistry.SHIELD_OBSIDIAN);
 
             event.accept(ItemRegistry.COPPER_SWORD);
             event.accept(ItemRegistry.AMETHYST_SWORD);
             event.accept(ItemRegistry.EMERALD_SWORD);
+
+            event.accept(ItemRegistry.COPPER_AXE);
+            event.accept(ItemRegistry.AMETHYST_AXE);
+            event.accept(ItemRegistry.EMERALD_AXE);
+
+
+            event.accept(ItemRegistry.SHIELD_LEATHER);
+            event.accept(ItemRegistry.SHIELD_BONE);
+            event.accept(ItemRegistry.SHIELD_OBSIDIAN);
+
 
             event.accept(ItemRegistry.EMERALD_BOOTS);
             event.accept(ItemRegistry.EMERALD_HELMET);
             event.accept(ItemRegistry.EMERALD_CHESTPLATE);
             event.accept(ItemRegistry.EMERALD_LEGGINGS);
 
-            event.accept(ItemRegistry.CREATIVE_SWORD);
         } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+
             event.accept(ItemRegistry.COPPER_SHOVEL);
             event.accept(ItemRegistry.COPPER_HOE);
             event.accept(ItemRegistry.COPPER_PICKAXE);
@@ -117,9 +130,16 @@ public class ItemRegistry {
             event.accept(ItemRegistry.EMERALD_HOE);
             event.accept(ItemRegistry.EMERALD_PICKAXE);
             event.accept(ItemRegistry.EMERALD_AXE);
+
         } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ItemRegistry.SCAFFOLD_FRAGILE);
             event.accept(ItemRegistry.SCAFFOLD_RESPONSIVE);
+
+            event.accept(ItemRegistry.SPIKES_IRON);
+            event.accept(ItemRegistry.SPIKES_CURSE);
+            event.accept(ItemRegistry.SPIKES_FIRE);
+        } else if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+            event.accept(ItemRegistry.CREATIVE_SWORD);
         }
     }
 }

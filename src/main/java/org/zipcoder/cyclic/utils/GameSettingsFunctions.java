@@ -3,6 +3,7 @@ package org.zipcoder.cyclic.utils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.OptionInstance;
 import net.minecraft.client.Options;
+import org.zipcoder.cyclic.utils.mixin.I_OptionInstance;
 
 public class GameSettingsFunctions {
     private static final Minecraft mc = Minecraft.getInstance();

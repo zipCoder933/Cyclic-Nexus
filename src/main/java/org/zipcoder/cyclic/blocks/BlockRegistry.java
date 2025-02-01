@@ -10,6 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.zipcoder.cyclic.blocks.angelScaffolding.BlockScaffolding;
 import org.zipcoder.cyclic.blocks.angelScaffolding.BlockScaffoldingResponsive;
+import org.zipcoder.cyclic.blocks.spikes.EnumSpikeType;
+import org.zipcoder.cyclic.blocks.spikes.SpikesBlock;
 import org.zipcoder.cyclic.items.ItemRegistry;
 
 import java.util.function.Supplier;
@@ -22,6 +24,11 @@ public class BlockRegistry {
 
     public static final RegistryObject<Block> SCAFFOLD_FRAGILE = BLOCKS.register("scaffold_fragile", () -> new BlockScaffolding(Block.Properties.of(), true));
     public static final RegistryObject<Block> SCAFFOLD_RESPONSIVE = BLOCKS.register("scaffold_responsive", () -> new BlockScaffoldingResponsive(Block.Properties.of(), false));
+
+    public static final RegistryObject<Block> SPIKES_IRON = BLOCKS.register("spikes_iron", () -> new SpikesBlock(Block.Properties.of(), EnumSpikeType.PLAIN));
+    public static final RegistryObject<Block> SPIKES_FIRE = BLOCKS.register("spikes_fire", () -> new SpikesBlock(Block.Properties.of(), EnumSpikeType.FIRE));
+    public static final RegistryObject<Block> SPIKES_CURSE = BLOCKS.register("spikes_curse", () -> new SpikesBlock(Block.Properties.of(), EnumSpikeType.CURSE));
+//    public static final RegistryObject<Block> SPIKES_DIAMOND = BLOCKS.register("spikes_diamond", () -> new SpikesDiamond(Block.Properties.of()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlockAndItem(String name, Supplier<T> block) {

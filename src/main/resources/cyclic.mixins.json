@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "cyclic.refmap.json",
   "mixins": [
-    "OptionInstanceMixin"
+    "OptionInstanceMixin",
+    "BlockEntityWithoutLevelRendererMixin"
   ],
   "client": [
   ],
