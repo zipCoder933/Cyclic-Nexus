@@ -32,8 +32,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
         if (!event.getItemStack().isEmpty()) {
-            if (event.getItemStack().getItem() instanceof ItemScaffolding
-                    && event.getEntity().isCrouching()) {
+            if (event.getItemStack().getItem() instanceof ItemScaffolding && event.getEntity().isCrouching()) {
                 scaffoldHit(event);
             }
         }
@@ -42,7 +41,7 @@ public class EventHandler {
     private void scaffoldHit(PlayerInteractEvent.RightClickBlock event) {
         ItemScaffolding item = (ItemScaffolding) event.getItemStack().getItem();
         Direction opp = event.getFace().getOpposite();
-        BlockPos dest = LevelWorldUtil.nextReplaceableInDirection(event.getLevel(), event.getPos(), opp, 16, item.getBlock());
+        BlockPos dest = LevelWorldUtil.nextReplaceableInDirection(event.getLevel(), event.getPos(), opp, 16);
         if (event.getLevel().isEmptyBlock(dest)) {
             event.getLevel().setBlockAndUpdate(dest, item.getBlock().defaultBlockState());
             ItemStack stac = event.getEntity().getItemInHand(event.getHand());

@@ -22,18 +22,20 @@ public class PotionsRegistry {
     public final static DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(ForgeRegistries.POTIONS, MOD_ID);
 
+    static final int normalDuration = 3600;
+
     public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion",
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 200, 0)));
 
     public static final RegistryObject<Potion> REACH_POTION = POTIONS.register("reach_distance",
-            () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), 1000, 0)));
+            () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), normalDuration, 0)));
 
     public static final RegistryObject<Potion> ATTACK_RANGE_POTION = POTIONS.register("attach_range",
-            () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), 1000, 0)));
+            () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), normalDuration, 0)));
 
     //Uses existing effects
     public static final RegistryObject<Potion> BLIND_POTION = POTIONS.register("blind",
-            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(MobEffects.BLINDNESS, 3600)));
+            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(MobEffects.BLINDNESS, normalDuration)));
 
 
     public static void register(IEventBus eventBus) {
@@ -48,7 +50,7 @@ public class PotionsRegistry {
         final ItemStack thickPotion = PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.THICK);
         final ItemStack nightVisionPotion = PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.NIGHT_VISION);
         // Potion recipes
-        basicBrewing(FREEZE_POTION.get(), nightVisionPotion.copy(), Items.BEETROOT);
+//        basicBrewing(FREEZE_POTION.get(), nightVisionPotion.copy(), Items.BEETROOT);
         basicBrewing(REACH_POTION.get(), thickPotion.copy(), Items.AMETHYST_SHARD);
 //        basicBrewing(ATTACK_RANGE_POTION.get(), awkwardPotion.copy(), Items.GOLDEN_APPLE);
         basicBrewing(BLIND_POTION.get(), nightVisionPotion.copy(), Items.GOLDEN_APPLE);

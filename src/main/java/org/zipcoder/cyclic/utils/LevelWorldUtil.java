@@ -58,7 +58,7 @@ public class LevelWorldUtil {
         return Math.sqrt((double) (xDistance * xDistance + zDistance * zDistance));
     }
 
-    public static BlockPos nextReplaceableInDirection(Level world, BlockPos posIn, Direction facing, int max, Block blockMatch) {
+    public static BlockPos nextReplaceableInDirection(Level world, BlockPos posIn, Direction facing, int max) {
         BlockPos posToPlaceAt = new BlockPos(posIn);
         BlockPos posLoop = new BlockPos(posIn);
 
@@ -68,7 +68,6 @@ public class LevelWorldUtil {
                 posToPlaceAt = posLoop;
                 break;
             }
-
             posLoop = posLoop.relative(facing);
         }
 

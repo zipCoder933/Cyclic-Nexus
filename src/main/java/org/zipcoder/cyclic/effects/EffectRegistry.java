@@ -23,11 +23,11 @@ public class EffectRegistry {
 
     public static final RegistryObject<MobEffect> ATTACK_RANGE = MOB_EFFECTS.register("attack_range",
             () -> new EmptyMobEffect(MobEffectCategory.BENEFICIAL, 0x35db77)
-            .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "5207DE5E-7CE8-4030-940E-514C1F160890", 2, AttributeModifier.Operation.MULTIPLY_TOTAL));
+            .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "5207DE5E-7CE8-4030-940E-514C1F160890", 1.5f, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
     public static final RegistryObject<MobEffect> REACH_DISTANCE = MOB_EFFECTS.register("reach_distance",
             () -> new EmptyMobEffect(MobEffectCategory.BENEFICIAL, 0x500980)
-            .addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "5207DE5E-7CE8-4030-940E-514C1F160890", 2, AttributeModifier.Operation.MULTIPLY_TOTAL));
+            .addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "5207DE5E-7CE8-4030-940E-514C1F160890", 1.5f, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
     //    public static final RegistryObject<MobEffect> SWIMSPEED = MOB_EFFECTS.register("swimspeed", () -> new CyclicMobEffect(MobEffectCategory.BENEFICIAL, 0x663300)
 //            .addAttributeModifier(ForgeMod.SWIM_SPEED.get(), "8207DE5E-7CE8-4030-940E-514C1F160890", 2, AttributeModifier.Operation.MULTIPLY_TOTAL));

@@ -25,7 +25,7 @@ import org.zipcoder.cyclic.utils.EntityUtil;
 
 public class BlockScaffolding extends Block {
 
-    private static final double CHANCE_CRUMBLE = 0.5;
+    private static final double CHANCE_CRUMBLE = 0.6;
     private static final double CLIMB_SPEED = 0.31D; // compare to climbing glove
     private static final double OFFSET = 0.125D;
     public static final VoxelShape AABB = Block.box(OFFSET, OFFSET, OFFSET,
@@ -57,8 +57,12 @@ public class BlockScaffolding extends Block {
         }
     }
 
+//    @Override
+//    public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {}
+
+    //Random tick is more efficient
     @Override
-    public void tick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
+    public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
         if (doesAutobreak && random.nextDouble() < CHANCE_CRUMBLE) {
             worldIn.destroyBlock(pos, true);
         }
