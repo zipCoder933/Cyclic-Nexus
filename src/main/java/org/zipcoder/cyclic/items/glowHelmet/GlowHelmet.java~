@@ -5,7 +5,7 @@ import net.minecraft.world.item.Item;
 import org.zipcoder.cyclic.materials.ModArmorMaterials;
 
 public class GlowHelmet extends ArmorItem {
-    public static final double MAX_GAMMA = 8.5;
+    public static final double MAX_GAMMA = 9.0;
 
     public GlowHelmet() {
         super(

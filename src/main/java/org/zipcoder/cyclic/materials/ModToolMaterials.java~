@@ -36,7 +36,7 @@ public class ModToolMaterials {
             //Tiers.IRON
             new ForgeTier(
                     2,
-                    500,
+                    260,
                     Tiers.IRON.getSpeed(), 
                     2.0F,
                     26,
@@ -48,10 +48,10 @@ public class ModToolMaterials {
 
     public static final Tier EMERALD = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
-//            Tiers.GOLD
+            //Tiers.GOLD
             new ForgeTier(
                     0,
-                    1561,
+                    260,
                     8.0F,
                     0.0F,
                     22,

@@ -5,12 +5,16 @@ import net.minecraft.client.gui.screens.social.PlayerEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -49,6 +53,36 @@ public class EventHandler {
             event.setCanceled(true);
         }
     }
+
+//    @SubscribeEvent
+//    public void onEntityDamage(LivingDamageEvent event) {
+//        DamageSource src = event.getSource();
+//        if (event.getEntity() instanceof Player player) {
+//
+//            if (src.is(DamageTypes.MAGIC) || src.is(DamageTypes.DRAGON_BREATH)) {
+////                this.damageFinder(event, player, ItemRegistry.CHARM_MAGICDEF.get(), 0.5F);
+//            } else if (src.is(DamageTypes.STARVE)) {
+//                if (this.damageFinder(event, player, ItemRegistry.CHARM_STARVATION.get(), 0)) {
+//                    player.getFoodData().eat(0, 0.2F);
+//                }
+//            }
+//
+//        }
+//    }
+//
+//    private boolean damageFinder(LivingDamageEvent event, Player player, Item item, float factor) {
+//        ItemStack find = CharmUtil.getIfEnabled(player, item);
+//        if (!find.isEmpty()) {
+//            float amt = event.getAmount() * factor;
+//            event.setAmount(amt);
+//            if (amt <= 0) {
+//                event.setCanceled(true);
+//            }
+//            ItemStackUtil.damageItem(player, find);
+//            return true;
+//        }
+//        return false;
+//    }
 
 //    private static double defaultGamma = 1.0D;
 //    public static ItemStack getHelmet(Player player) {
