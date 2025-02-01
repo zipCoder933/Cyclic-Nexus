@@ -14,18 +14,14 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
 
     GLOW_ARMOR("glowing",
-            30, // durability
-            new int[]{ // protection
-                    3, // head
-                    7, // body
-                    5, // legs
-                    4, // feet
-            },
+            60, // durability
+            new int[]{ 2, // head protection
+                    5, 3, 1,},
             10, // enchantability
             SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
             1F, // toughness
             0F, // knockback resistance
-            () -> Ingredient.of(Items.GOLD_BLOCK)), // repair material
+            () -> Ingredient.of(Items.GOLD_INGOT)), // repair material
 
     //ArmorMaterials.GOLD.getDurabilityForType(ArmorItem.Type.HELMET)
     //Emerald is gold but with a higher durability, toughness and enchantment value

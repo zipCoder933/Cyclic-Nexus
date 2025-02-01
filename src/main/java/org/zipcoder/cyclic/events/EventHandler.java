@@ -1,35 +1,52 @@
 package org.zipcoder.cyclic.events;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.zipcoder.cyclic.Cyclic;
+import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
 import org.zipcoder.cyclic.items.ItemRegistry;
 import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.utils.GameSettingsFunctions;
+import org.zipcoder.cyclic.utils.ItemStackUtil;
+import org.zipcoder.cyclic.utils.LevelWorldUtil;
 
 
 //This tag automatically adds the event without needing to register it manually
-@Mod.EventBusSubscriber(modid = Cyclic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = Cyclic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EventHandler {
 
+    @SubscribeEvent
+    public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        if (!event.getItemStack().isEmpty()) {
+            if (event.getItemStack().getItem() instanceof ItemScaffolding
+                    && event.getEntity().isCrouching()) {
+                scaffoldHit(event);
+            }
+        }
+    }
+
+    private void scaffoldHit(PlayerInteractEvent.RightClickBlock event) {
+        ItemScaffolding item = (ItemScaffolding) event.getItemStack().getItem();
+        Direction opp = event.getFace().getOpposite();
+        BlockPos dest = LevelWorldUtil.nextReplaceableInDirection(event.getLevel(), event.getPos(), opp, 16, item.getBlock());
+        if (event.getLevel().isEmptyBlock(dest)) {
+            event.getLevel().setBlockAndUpdate(dest, item.getBlock().defaultBlockState());
+            ItemStack stac = event.getEntity().getItemInHand(event.getHand());
+            ItemStackUtil.shrink(event.getEntity(), stac);
+            event.setCanceled(true);
+        }
+    }
+
     private static double defaultGamma = 1.0D;
-
-//    @SubscribeEvent
-//    public static void onClientTick(TickEvent.ClientTickEvent event) {
-//        if (event.phase == TickEvent.Phase.START) { // Runs at the start of each client tick
-//
-//        } else if (event.phase == TickEvent.Phase.END) {// Runs at the end of each client tick
-//
-//        }
-//    }
-
-
     public static ItemStack getHelmet(Player player) {
         return player.getItemBySlot(EquipmentSlot.HEAD);
     }

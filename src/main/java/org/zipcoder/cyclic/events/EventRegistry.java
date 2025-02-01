@@ -8,13 +8,6 @@ public class EventRegistry {
     public static void setup(final FMLCommonSetupEvent event) {
         PotionsRegistry.setup();
 //        PacketRegistry.setup();
-//        MinecraftForge.EVENT_BUS.register(new PotionEvents());
-//        MinecraftForge.EVENT_BUS.register(new ItemEvents());
-//        MinecraftForge.EVENT_BUS.register(new PlayerDataEvents());
-//        MinecraftForge.EVENT_BUS.register(new PlayerAbilityEvents());
-//        MinecraftForge.EVENT_BUS.register(new CapabilityEvents());
-//        event.enqueueWork(() -> {
-//            CompostRegistry.setup();
-//        });
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
     }
 }

@@ -51,7 +51,6 @@ public class Cyclic {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(EventHandler.class);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -61,7 +60,6 @@ public class Cyclic {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        MinecraftForge.EVENT_BUS.register(EventHandler.class);
     }
 
     // Add the example block item to the building blocks tab
@@ -72,7 +70,6 @@ public class Cyclic {
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
@@ -80,8 +77,6 @@ public class Cyclic {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            //Register custom events
-            MinecraftForge.EVENT_BUS.register(EventHandler.class);
         }
     }
 }

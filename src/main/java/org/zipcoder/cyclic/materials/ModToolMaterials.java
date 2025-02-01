@@ -19,10 +19,12 @@ public class ModToolMaterials {
     //after stone then COPPER
     public static final Tier COPPER = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
-            new ForgeTier(Tiers.IRON.getLevel(),
-                    (Tiers.STONE.getUses() + Tiers.IRON.getUses()) / 2, (Tiers.STONE.getSpeed() + Tiers.IRON.getSpeed()) / 2, // uses aka durability
-                    (Tiers.STONE.getAttackDamageBonus() + Tiers.IRON.getAttackDamageBonus()) / 2,
-                    Tiers.DIAMOND.getEnchantmentValue() + 2,
+            new ForgeTier(
+                    Tiers.STONE.getLevel(),
+                    (int) (Tiers.STONE.getUses() * 1.5f),
+                    Tiers.STONE.getSpeed() * 1.5f,
+                    Tiers.STONE.getAttackDamageBonus() * 1.5f,
+                    Tiers.IRON.getEnchantmentValue() * 1,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
                     () -> Ingredient.of(Items.COPPER_INGOT)),
             new ResourceLocation(MOD_ID, "copper"),
@@ -31,9 +33,12 @@ public class ModToolMaterials {
     //after iron is AMYTH
     public static final Tier AMETHYST = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
-            new ForgeTier(Tiers.IRON.getLevel(),
-                    Tiers.IRON.getUses() + 5, Tiers.IRON.getSpeed() + 0.2F, // uses aka durability
-                    Tiers.IRON.getAttackDamageBonus() + 0.1F, Tiers.GOLD.getEnchantmentValue() * 2,
+            new ForgeTier(
+                    Tiers.IRON.getLevel(),
+                    (int) (Tiers.IRON.getUses() * 1.5f),
+                    Tiers.IRON.getSpeed() * 1.5f,
+                    Tiers.IRON.getAttackDamageBonus() * 1f,
+                    Tiers.IRON.getEnchantmentValue() * 1,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
                     () -> Ingredient.of(Items.AMETHYST_SHARD)),
             new ResourceLocation(MOD_ID, "amethyst"),
@@ -75,7 +80,7 @@ public class ModToolMaterials {
                     Tiers.NETHERITE.getUses() * 9999,
                     Tiers.NETHERITE.getSpeed() * 9999, // uses aka durability
                     Tiers.NETHERITE.getAttackDamageBonus() * 9999,  //Attack damage bonus
-                    Tiers.NETHERITE.getEnchantmentValue() * 999,
+                    Tiers.NETHERITE.getEnchantmentValue() * 9999,
 
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_netherite_tool")), //Tag
 
