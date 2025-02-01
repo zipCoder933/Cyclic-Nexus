@@ -18,12 +18,21 @@ public class ModKeybinds {
             "key."+MOD_ID+".toggle_night_vision",
             KeyConflictContext.IN_GAME, // Only works in-game
             InputConstants.Type.KEYSYM,
-            GLFW.GLFW_KEY_N, // Default to "G"
+            GLFW.GLFW_KEY_N,
+            DEFAULT_CATEGORY
+    );
+
+    public static final KeyMapping KEY_TOGGLE_NOCLIP = new KeyMapping(
+            "key."+MOD_ID+".toggle_noclip",
+            KeyConflictContext.IN_GAME, // Only works in-game
+            InputConstants.Type.KEYSYM,
+            GLFW.GLFW_KEY_K,
             DEFAULT_CATEGORY
     );
 
     @SubscribeEvent
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
         event.register(KEY_TOGGLE_NIGHT_VISION);
+        event.register(KEY_TOGGLE_NOCLIP);
     }
 }

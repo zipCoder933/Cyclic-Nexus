@@ -1,12 +1,15 @@
 package org.zipcoder.cyclic.events;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.social.PlayerEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,6 +26,7 @@ import org.zipcoder.cyclic.utils.LevelWorldUtil;
 //This tag automatically adds the event without needing to register it manually
 @Mod.EventBusSubscriber(modid = Cyclic.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EventHandler {
+
 
     @SubscribeEvent
     public void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
@@ -43,6 +47,29 @@ public class EventHandler {
             ItemStack stac = event.getEntity().getItemInHand(event.getHand());
             ItemStackUtil.shrink(event.getEntity(), stac);
             event.setCanceled(true);
+        }
+    }
+
+    public final static Vec3 defaultDelta = new Vec3(1, 1, 1);
+    public final static Vec3 stillDelta = new Vec3(0, 0, 0);
+
+
+    @SubscribeEvent
+    public static void onClientTick(TickEvent.ClientTickEvent event) {
+        if (event.phase == TickEvent.Phase.END) {
+            Player player = Minecraft.getInstance().player;
+            if (player != null) {//Important
+
+                if (player.getAbilities().flying) {
+                    System.out.println("Client tick,");
+                    // Force movement values to prevent inertia
+                    player.setDeltaMovement(stillDelta);
+                    player.noPhysics = true;
+                } else {
+//                    player.setDeltaMovement(defaultDelta);
+                    player.noPhysics = false;
+                }
+            }
         }
     }
 

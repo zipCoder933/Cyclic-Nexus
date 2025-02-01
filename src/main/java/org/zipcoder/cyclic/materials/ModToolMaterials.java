@@ -15,44 +15,46 @@ import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 
 public class ModToolMaterials {
 
-
-    //after stone then COPPER
+    //Comes after stone
     public static final Tier COPPER = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
+            //Tiers.STONE
             new ForgeTier(
-                    Tiers.STONE.getLevel(),
-                    (int) (Tiers.STONE.getUses() * 1.5f),
-                    Tiers.STONE.getSpeed() * 1,
-                    Tiers.STONE.getAttackDamageBonus() * 1,
-                    (int) (Tiers.STONE.getEnchantmentValue() * 1.5f),
+                    1,
+                    231,
+                    4.0F,
+                    1.0F,
+                    8,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
                     () -> Ingredient.of(Items.COPPER_INGOT)),
             new ResourceLocation(MOD_ID, "copper"),
             List.of(Tiers.STONE), List.of(Tiers.IRON));
-    //then RON
-    //after iron is AMYTH
+
+
     public static final Tier AMETHYST = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
+            //Tiers.IRON
             new ForgeTier(
-                    Tiers.IRON.getLevel(),
-                    (int) (Tiers.IRON.getUses() * 1.5f),
-                    Tiers.IRON.getSpeed() * 1.5f,
-                    Tiers.IRON.getAttackDamageBonus() * 1f,
-                    Tiers.IRON.getEnchantmentValue() * 1,
+                    2,
+                    260,
+                    6.3F,
+                    2.0F,
+                    26,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
                     () -> Ingredient.of(Items.AMETHYST_SHARD)),
             new ResourceLocation(MOD_ID, "amethyst"),
             List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
-    //then diamond
-    //after diamond is
+
+
     public static final Tier EMERALD = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
+            //Tiers.GOLD
             new ForgeTier(
-                    Tiers.GOLD.getLevel() * 1,
-                    Tiers.DIAMOND.getUses() * 1,
-                    Tiers.GOLD.getSpeed() * 2,
-                    Tiers.DIAMOND.getAttackDamageBonus() * 0.75f,
-                    Tiers.GOLD.getEnchantmentValue() * 2,
+                    0,
+                    260,
+                    12.0F,
+                    0.0F,
+                    22,
 
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_emerald_tool")),
                     () -> Ingredient.of(Items.EMERALD)),//Repair

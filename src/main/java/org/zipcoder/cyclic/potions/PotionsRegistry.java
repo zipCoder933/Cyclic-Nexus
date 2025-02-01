@@ -23,12 +23,12 @@ public class PotionsRegistry {
             DeferredRegister.create(ForgeRegistries.POTIONS, MOD_ID);
 
     public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion",
-            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
 
     public static final RegistryObject<Potion> REACH_POTION = POTIONS.register("reach_distance",
             () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), 1000, 0)));
 
-    public static final RegistryObject<Potion> ATTACK_RANGE_POTION = POTIONS.register("reach_potion",
+    public static final RegistryObject<Potion> ATTACK_RANGE_POTION = POTIONS.register("attach_range",
             () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), 1000, 0)));
 
     //Uses existing effects

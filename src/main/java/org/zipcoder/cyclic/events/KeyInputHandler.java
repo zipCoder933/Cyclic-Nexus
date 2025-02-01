@@ -30,6 +30,8 @@ public class KeyInputHandler {
                 GameSettingsFunctions.setGamma(GlowHelmet.MAX_GAMMA);
                 ClientUtils.showToast("Night Vision", "Night Vision Enabled");
             }
+        }else if (ModKeybinds.KEY_TOGGLE_NOCLIP.isDown()) {
+
         }
     }
 
