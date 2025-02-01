@@ -23,16 +23,17 @@ public class PotionsRegistry {
             DeferredRegister.create(ForgeRegistries.POTIONS, MOD_ID);
 
     public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion",
-            () -> new Potion(new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
+            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
 
     public static final RegistryObject<Potion> REACH_POTION = POTIONS.register("reach_distance",
-            () -> new Potion(new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), 1000, 0)));
+            () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), 1000, 0)));
 
     public static final RegistryObject<Potion> ATTACK_RANGE_POTION = POTIONS.register("reach_potion",
-            () -> new Potion(new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), 1000, 0)));
+            () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), 1000, 0)));
 
+    //Uses existing effects
     public static final RegistryObject<Potion> BLIND_POTION = POTIONS.register("blind",
-            () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS, 3600)));
+            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(MobEffects.BLINDNESS, 3600)));
 
 
     public static void register(IEventBus eventBus) {
@@ -49,7 +50,7 @@ public class PotionsRegistry {
         // Potion recipes
         basicBrewing(FREEZE_POTION.get(), nightVisionPotion.copy(), Items.BEETROOT);
         basicBrewing(REACH_POTION.get(), thickPotion.copy(), Items.AMETHYST_SHARD);
-        basicBrewing(ATTACK_RANGE_POTION.get(), awkwardPotion.copy(), Items.GOLDEN_APPLE);
+//        basicBrewing(ATTACK_RANGE_POTION.get(), awkwardPotion.copy(), Items.GOLDEN_APPLE);
         basicBrewing(BLIND_POTION.get(), nightVisionPotion.copy(), Items.GOLDEN_APPLE);
     }
 

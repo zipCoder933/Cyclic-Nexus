@@ -91,9 +91,7 @@ public class ItemRegistry {
     }
 
     public static void addToCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ItemRegistry.GLOW_HELMET);
-        } else if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
 
             event.accept(ItemRegistry.COPPER_SWORD);
             event.accept(ItemRegistry.AMETHYST_SWORD);
@@ -131,13 +129,16 @@ public class ItemRegistry {
             event.accept(ItemRegistry.EMERALD_PICKAXE);
             event.accept(ItemRegistry.EMERALD_AXE);
 
-        } else if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ItemRegistry.GLOW_HELMET);
+
+        } else if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ItemRegistry.SCAFFOLD_FRAGILE);
             event.accept(ItemRegistry.SCAFFOLD_RESPONSIVE);
 
             event.accept(ItemRegistry.SPIKES_IRON);
             event.accept(ItemRegistry.SPIKES_CURSE);
             event.accept(ItemRegistry.SPIKES_FIRE);
+
         } else if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
             event.accept(ItemRegistry.CREATIVE_SWORD);
         }

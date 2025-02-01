@@ -14,21 +14,21 @@ public class FreezeEffect extends MobEffect {
                 "91AEAA56-376B-4498-935B-2F7F68070636", -50, AttributeModifier.Operation.ADDITION);
     }
 
-    //This is not required but it is nice to have
-    @Override
-    public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.level().isClientSide()) {// server
-            Double x = pLivingEntity.getX();
-            Double y = pLivingEntity.getY();
-            Double z = pLivingEntity.getZ();
-
-            pLivingEntity.teleportTo(x, y, z);
-            pLivingEntity.setDeltaMovement(0, 0, 0);
-        }
-    }
-
-    @Override
-    public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
-        return true;
-    }
+//    //This is not required but it is nice to have
+//    @Override
+//    public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
+//        if (!pLivingEntity.level().isClientSide()) {// server
+//            Double x = pLivingEntity.getX();
+//            Double y = pLivingEntity.getY();
+//            Double z = pLivingEntity.getZ();
+//
+//            pLivingEntity.teleportTo(x, y, z);
+//            pLivingEntity.setDeltaMovement(0, 0, 0);
+//        }
+//    }
+//
+//    @Override
+//    public boolean isDurationEffectTick(int pDuration, int pAmplifier) {
+//        return true;
+//    }
 }
