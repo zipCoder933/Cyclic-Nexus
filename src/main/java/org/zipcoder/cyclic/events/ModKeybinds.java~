@@ -18,7 +18,7 @@ public class ModKeybinds {
             "key."+MOD_ID+".toggle_night_vision",
             KeyConflictContext.IN_GAME, // Only works in-game
             InputConstants.Type.KEYSYM,
-            GLFW.GLFW_KEY_UNKNOWN,
+            GLFW.GLFW_KEY_N,
             DEFAULT_CATEGORY
     );
 
