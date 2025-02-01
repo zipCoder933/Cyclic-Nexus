@@ -34,6 +34,11 @@ public class ShieldCyclicItem extends ShieldItem implements Equipable {
     }
 
     @Override
+    public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
+        return ToolActions.DEFAULT_SHIELD_ACTIONS.contains(toolAction) || toolAction.equals(ToolActions.SHIELD_BLOCK);
+    }
+
+    @Override
     public boolean isValidRepairItem(ItemStack stackShield, ItemStack stackIngredient) {
         if (type == ShieldType.LEATHER)
             return stackIngredient.is(Items.LEATHER);

@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.social.PlayerEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -50,28 +51,25 @@ public class EventHandler {
         }
     }
 
-    public final static Vec3 defaultDelta = new Vec3(1, 1, 1);
-    public final static Vec3 stillDelta = new Vec3(0, 0, 0);
 
-
-    @SubscribeEvent
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            Player player = Minecraft.getInstance().player;
-            if (player != null) {//Important
-
-                if (player.getAbilities().flying) {
-                    System.out.println("Client tick,");
-                    // Force movement values to prevent inertia
-                    player.setDeltaMovement(stillDelta);
-                    player.noPhysics = true;
-                } else {
-//                    player.setDeltaMovement(defaultDelta);
-                    player.noPhysics = false;
-                }
-            }
-        }
-    }
+//    To disable flight inertia
+//    public final static Vec3 defaultDelta = new Vec3(1, 1, 1);
+//    public final static Vec3 stillDelta = new Vec3(0.01, 0, 0.01);
+//    @SubscribeEvent
+//    public static void onClientTick(TickEvent.ClientTickEvent event) {
+////        ItemTags.TRIMMABLE_ARMOR
+//        if (event.phase == TickEvent.Phase.END) {
+//            Player player = Minecraft.getInstance().player;
+//            if (player != null) {//Important
+//                if (player.getAbilities().flying) {
+//                    // Force movement values to prevent inertia
+//                    player.setDeltaMovement(stillDelta);
+//                    player.setSpeed(100000000);
+//                    // player.noPhysics = true;
+//                }
+//            }
+//        }
+//    }
 
 //    private static double defaultGamma = 1.0D;
 //    public static ItemStack getHelmet(Player player) {
