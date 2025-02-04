@@ -1,7 +1,6 @@
 package org.zipcoder.cyclic;
 
 import com.mojang.logging.LogUtils;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -10,12 +9,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
-import org.zipcoder.cyclic.client.ClientEvents;
 import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventRegistry;
@@ -35,7 +32,7 @@ public class Cyclic {
 
     public Cyclic() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientEvents::setupClient);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setupClient);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegistry.register(modEventBus);
@@ -72,11 +69,5 @@ public class Cyclic {
     public void onServerStarting(ServerStartingEvent event) {
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
-    }
+
 }
