@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-         {"required":false, "id":"cyclic:flower_cyan"},
-         {"required":false, "id":"cyclic:flower_purple_tulip"},
-         {"required":false, "id":"cyclic:flower_absalon_tulip"},
-         {"required":false, "id":"cyclic:flower_lime_carnation"}
-  ]
-}
