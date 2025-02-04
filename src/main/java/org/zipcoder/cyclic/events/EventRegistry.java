@@ -14,7 +14,4 @@ public class EventRegistry {
 //        MinecraftForge.EVENT_BUS.register(new EventHandler());
     }
 
-    public static void setupClient(final FMLClientSetupEvent event) {
-        MaterialShieldRegistry.initShields();
-    }
 }

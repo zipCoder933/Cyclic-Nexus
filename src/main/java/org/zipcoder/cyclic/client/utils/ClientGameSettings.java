@@ -1,11 +1,10 @@
-package org.zipcoder.cyclic.utils;
+package org.zipcoder.cyclic.client.utils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.OptionInstance;
-import net.minecraft.client.Options;
 import org.zipcoder.cyclic.utils.mixin.I_OptionInstance;
 
-public class GameSettingsFunctions {
+public class ClientGameSettings {
     private static final Minecraft mc = Minecraft.getInstance();
     private static final OptionInstance<Double> gamma = mc.options.gamma();
     private static final I_OptionInstance<Double> mixInGamma = (I_OptionInstance<Double>) (Object) gamma;

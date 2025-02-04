@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
+import org.zipcoder.cyclic.client.ClientEvents;
 import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventRegistry;
@@ -34,7 +35,7 @@ public class Cyclic {
 
     public Cyclic() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setupClient);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientEvents::setupClient);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ItemRegistry.register(modEventBus);

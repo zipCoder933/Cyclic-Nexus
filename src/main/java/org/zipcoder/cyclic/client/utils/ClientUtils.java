@@ -1,9 +1,12 @@
-package org.zipcoder.cyclic.utils;
+package org.zipcoder.cyclic.client.utils;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.toasts.SystemToast;
 import net.minecraft.network.chat.Component;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class ClientUtils {
     static Minecraft mc = Minecraft.getInstance();
 

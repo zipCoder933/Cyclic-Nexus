@@ -1,29 +1,13 @@
 package org.zipcoder.cyclic.events;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.social.PlayerEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.zipcoder.cyclic.Cyclic;
 import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
-import org.zipcoder.cyclic.items.ItemRegistry;
-import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
-import org.zipcoder.cyclic.utils.GameSettingsFunctions;
 import org.zipcoder.cyclic.utils.ItemStackUtil;
 import org.zipcoder.cyclic.utils.LevelWorldUtil;
 
