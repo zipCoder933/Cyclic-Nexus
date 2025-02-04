@@ -3,14 +3,14 @@
   "pattern": [
     "OOO",
     "OSO",
-    " O "
+    "OOO"
   ],
   "key": {
     "S": {
       "item": "cyclic:shield_bone"
     },
     "O": {
-      "item": "cyclic:gem_obsidian"
+      "item": "minecraft:obsidian"
     }
   },
   "result": {

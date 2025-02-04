@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "cyclic:scaffold_fragile"
+  },
+  "result": "cyclic:scaffold_responsive",
+  "experience": 0.0,
+  "cookingtime": 50
+}
