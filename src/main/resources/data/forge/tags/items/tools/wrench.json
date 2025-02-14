@@ -1,9 +1,0 @@
-{
-	"replace": false,
-	"values": [
-		{
-			"id": "cyclic:cable_wrench",
-			"required": false
-		}
-	]
-}

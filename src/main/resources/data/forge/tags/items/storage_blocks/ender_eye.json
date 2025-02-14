@@ -1,6 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    { "id":"cyclic:eye_redstone","required":false}
-  ]
-}

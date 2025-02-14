@@ -1,6 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    { "id":"cyclic:flint_block","required":false}
-  ]
-}
