@@ -79,7 +79,7 @@ public class ItemRegistry {
 
     //Most durable
     public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 4.1f)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 4.15f)), ShieldCyclicItem.ShieldType.OBSIDIAN));
 
 
     //Creative gear
