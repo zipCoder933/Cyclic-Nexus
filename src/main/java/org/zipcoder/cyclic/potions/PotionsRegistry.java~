@@ -29,7 +29,7 @@ public class PotionsRegistry {
             () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 50, 0)));
 
     public static final RegistryObject<Potion> FREEZE_POTION_2 = POTIONS.register("freeze_potion_2", //5 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 120, 0)));
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 100, 0)));
 
     public static final RegistryObject<Potion> FREEZE_POTION_3 = POTIONS.register("freeze_potion_3", //10 seconds
             () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 200, 0)));

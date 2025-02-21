@@ -9,7 +9,6 @@ import net.minecraftforge.registries.RegistryObject;
 import org.zipcoder.cyclic.Cyclic;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
 import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
-import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.items.shield.ShieldCyclicItem;
 import org.zipcoder.cyclic.materials.ModArmorMaterials;
 import org.zipcoder.cyclic.materials.ModToolMaterials;
@@ -19,6 +18,12 @@ public class ItemRegistry {
             = DeferredRegister.create(ForgeRegistries.ITEMS, Cyclic.MOD_ID);
 
 //    public static final RegistryObject<Item> GLOW_HELMET = ITEMS.register("glowing_helmet", () -> new GlowHelmet());
+
+    //Misc
+    public static final RegistryObject<Item> SNOWFLAKE = ITEMS.register("snowflake", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_SNOWFLAKE = ITEMS.register("blue_snowflake", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_SNOWFLAKE = ITEMS.register("gold_snowflake", () -> new Item(new Item.Properties()));
+
 
     //Scaffolding
     public static final RegistryObject<Item> SCAFFOLD_FRAGILE = ITEMS.register("scaffold_fragile", () -> new ItemScaffolding(BlockRegistry.SCAFFOLD_FRAGILE.get(), new Item.Properties()));
@@ -124,7 +129,7 @@ public class ItemRegistry {
             event.accept(ItemRegistry.AMETHYST_PICKAXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
 
-            event.accept(ItemRegistry.EMERALD_SHOVEL);
+            event.accept(ItemRegistry.SNOWFLAKE);
             event.accept(ItemRegistry.EMERALD_HOE);
             event.accept(ItemRegistry.EMERALD_PICKAXE);
             event.accept(ItemRegistry.EMERALD_AXE);
@@ -141,6 +146,11 @@ public class ItemRegistry {
 
         } else if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
             event.accept(ItemRegistry.CREATIVE_SWORD);
+
+        } else if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ItemRegistry.SNOWFLAKE);
+            event.accept(ItemRegistry.BLUE_SNOWFLAKE);
+            event.accept(ItemRegistry.GOLD_SNOWFLAKE);
         }
     }
 }
