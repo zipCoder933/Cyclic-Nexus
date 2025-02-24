@@ -26,11 +26,11 @@ public class PotionsRegistry {
     static final int dur3Min = 180 * 20;
     static final int dur1Min = 60 * 20;
 
-    public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion", //5 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 5, 0)));
+    public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion", //10 seconds
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 10, 0)));
 
-    public static final RegistryObject<Potion> FREEZE_POTION_2 = POTIONS.register("freeze_potion_2", //15 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 16, 0)));
+    public static final RegistryObject<Potion> FREEZE_POTION_2 = POTIONS.register("freeze_potion_2", //30 seconds
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 40, 0)));
 
     public static final RegistryObject<Potion> FREEZE_POTION_3 = POTIONS.register("freeze_potion_3", //3 minutes
             () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), dur3Min, 0)));
