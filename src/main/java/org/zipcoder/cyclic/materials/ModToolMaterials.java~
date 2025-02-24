@@ -37,7 +37,7 @@ public class ModToolMaterials {
             new ForgeTier(
                     2,
                     500,
-                    Tiers.IRON.getSpeed(),
+                    Tiers.IRON.getSpeed(), 
                     2.0F,
                     26,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
@@ -78,7 +78,7 @@ public class ModToolMaterials {
     public static final Tier CREATIVE = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
             new ForgeTier(
-                    Tiers.NETHERITE.getLevel() + 1,
+                    Tiers.NETHERITE.getLevel(),
                     Tiers.NETHERITE.getUses() * 9999999,
                     Tiers.NETHERITE.getSpeed() * 9999999, // uses aka durability
                     Tiers.NETHERITE.getAttackDamageBonus() * 99999999,  //Attack damage bonus

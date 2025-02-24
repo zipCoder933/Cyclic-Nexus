@@ -23,27 +23,27 @@ public class PotionsRegistry {
     public final static DeferredRegister<Potion> POTIONS =
             DeferredRegister.create(ForgeRegistries.POTIONS, MOD_ID);
 
-    static final int normalDuration = 3600;
+    static final int dur3Min = 180 * 20;
+    static final int dur1Min = 60 * 20;
 
-    public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion", //2 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 50, 0)));
+    public static final RegistryObject<Potion> FREEZE_POTION = POTIONS.register("freeze_potion", //5 seconds
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 5, 0)));
 
-    public static final RegistryObject<Potion> FREEZE_POTION_2 = POTIONS.register("freeze_potion_2", //5 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 120, 0)));
+    public static final RegistryObject<Potion> FREEZE_POTION_2 = POTIONS.register("freeze_potion_2", //15 seconds
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 20 * 16, 0)));
 
-    public static final RegistryObject<Potion> FREEZE_POTION_3 = POTIONS.register("freeze_potion_3", //10 seconds
-            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), 200, 0)));
-
+    public static final RegistryObject<Potion> FREEZE_POTION_3 = POTIONS.register("freeze_potion_3", //3 minutes
+            () -> new Potion(MOD_ID + "_freeze", new MobEffectInstance(EffectRegistry.FREEZE.get(), dur3Min, 0)));
 
     public static final RegistryObject<Potion> REACH_POTION = POTIONS.register("reach_distance",
-            () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), normalDuration, 0)));
+            () -> new Potion(MOD_ID + "_reach_distance", new MobEffectInstance(EffectRegistry.REACH_DISTANCE.get(), dur3Min, 0)));
 
     public static final RegistryObject<Potion> ATTACK_RANGE_POTION = POTIONS.register("attach_range",
-            () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), normalDuration, 0)));
+            () -> new Potion(MOD_ID + "_attack_range", new MobEffectInstance(EffectRegistry.ATTACK_RANGE.get(), dur3Min, 0)));
 
     //Uses existing effects
     public static final RegistryObject<Potion> BLIND_POTION = POTIONS.register("blind",
-            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(MobEffects.BLINDNESS, normalDuration)));
+            () -> new Potion(MOD_ID + "_blind", new MobEffectInstance(MobEffects.BLINDNESS, dur3Min)));
 
 
     public static void register(IEventBus eventBus) {
@@ -64,11 +64,11 @@ public class PotionsRegistry {
 
         //freeze 2
         final ItemStack freeze_potion = PotionUtils.setPotion(new ItemStack(Items.POTION), FREEZE_POTION.get());
-        basicBrewing(FREEZE_POTION_2.get(), freeze_potion.copy(), ItemRegistry.BLUE_SNOWFLAKE.get());
+        basicBrewing(FREEZE_POTION_2.get(), freeze_potion.copy(), ItemRegistry.GOLD_SNOWFLAKE.get());
 
         //freeze 3
-        final ItemStack freeze_potion_2 = PotionUtils.setPotion(new ItemStack(Items.POTION), FREEZE_POTION_2.get());
-        basicBrewing(FREEZE_POTION_3.get(), freeze_potion_2.copy(), ItemRegistry.GOLD_SNOWFLAKE.get());
+//        final ItemStack freeze_potion_2 = PotionUtils.setPotion(new ItemStack(Items.POTION), FREEZE_POTION_2.get());
+//        basicBrewing(FREEZE_POTION_3.get(), freeze_potion_2.copy(), ItemRegistry.GOLD_SNOWFLAKE.get());
 
 
         //reach
