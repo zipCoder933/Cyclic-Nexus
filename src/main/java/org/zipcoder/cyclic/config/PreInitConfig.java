@@ -7,12 +7,8 @@ import org.zipcoder.cyclic.Cyclic;
 
 import java.io.File;
 import java.nio.file.Path;
-import java.util.logging.Logger;
 
 public class PreInitConfig {
-
-    public boolean nightVisionKey;
-
     public PreInitConfig() {
         try {
 
@@ -23,7 +19,6 @@ public class PreInitConfig {
                     loadConfig(config);
                 } else {
                     writeConfig(config);
-                    loadConfig(config);
                 }
             }
 
@@ -33,10 +28,15 @@ public class PreInitConfig {
     }
 
     /**
+     * Default values go here
+     */
+    public boolean nightVisionKey = false;
+
+    /**
      * Write a new config
      */
     private void writeConfig(FileConfig config) {
-        config.set("client.night_vision_key", true);
+        config.set("client.night_vision_key", nightVisionKey);
         config.save();
     }
 
