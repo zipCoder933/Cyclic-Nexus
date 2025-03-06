@@ -23,7 +23,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SNOWFLAKE = ITEMS.register("snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BLUE_SNOWFLAKE = ITEMS.register("blue_snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_SNOWFLAKE = ITEMS.register("gold_snowflake", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JADE_CRYSTAL = ITEMS.register("jade_crystal", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PRISMARINE_GEMSTONE = ITEMS.register("prismarine_gemstone", () -> new Item(new Item.Properties()));
 
 
     //Scaffolding
@@ -148,7 +148,7 @@ public class ItemRegistry {
             event.accept(ItemRegistry.CREATIVE_SWORD);
 
         } else if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ItemRegistry.JADE_CRYSTAL);
+            event.accept(ItemRegistry.PRISMARINE_GEMSTONE);
             event.accept(ItemRegistry.SNOWFLAKE);
             event.accept(ItemRegistry.BLUE_SNOWFLAKE);
             event.accept(ItemRegistry.GOLD_SNOWFLAKE);

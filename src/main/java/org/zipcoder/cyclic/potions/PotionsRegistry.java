@@ -76,7 +76,7 @@ public class PotionsRegistry {
         basicBrewing(REACH_POTION.get(), awkwardPotion.copy(), Items.AMETHYST_SHARD);
 
         //Attack range
-        basicBrewing(ATTACK_RANGE_POTION.get(), reach_potion.copy(), ItemRegistry.JADE_CRYSTAL.get());
+        basicBrewing(ATTACK_RANGE_POTION.get(), reach_potion.copy(), ItemRegistry.PRISMARINE_GEMSTONE.get());
 
         //Blindness
         basicBrewing(BLIND_POTION.get(), nightVisionPotion.copy(), Items.GOLDEN_APPLE);
