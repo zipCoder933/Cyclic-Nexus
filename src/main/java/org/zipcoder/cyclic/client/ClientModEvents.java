@@ -8,10 +8,15 @@ import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.lwjgl.glfw.GLFW;
-import org.zipcoder.cyclic.Config;
+import org.zipcoder.cyclic.config.PreInitConfig;
+
+import java.io.File;
+import java.nio.file.Path;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
+import static org.zipcoder.cyclic.Cyclic.preInit;
 
 // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -32,6 +37,6 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-        if(Config.nightVisionKey) event.register(KEY_TOGGLE_NIGHT_VISION);
+        if (preInit.nightVisionKey) event.register(KEY_TOGGLE_NIGHT_VISION);
     }
 }

@@ -13,6 +13,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
+import org.zipcoder.cyclic.config.Config;
+import org.zipcoder.cyclic.config.PreInitConfig;
 import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventRegistry;
@@ -28,7 +30,9 @@ public class Cyclic {
     public static final String MOD_ID = "cyclic";
     // Directly reference a slf4j logger
     //The logger is a central point for logging
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
+    //Initialize the pre-init config before anything else
+    public static final PreInitConfig preInit = new PreInitConfig();
 
     public Cyclic() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(EventRegistry::setup);
