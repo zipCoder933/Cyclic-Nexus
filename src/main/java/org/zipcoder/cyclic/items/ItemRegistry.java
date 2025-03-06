@@ -130,6 +130,7 @@ public class ItemRegistry {
             event.accept(ItemRegistry.AMETHYST_PICKAXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
 
+            event.accept(ItemRegistry.EMERALD_SHOVEL);
             event.accept(ItemRegistry.EMERALD_HOE);
             event.accept(ItemRegistry.EMERALD_PICKAXE);
             event.accept(ItemRegistry.EMERALD_AXE);
