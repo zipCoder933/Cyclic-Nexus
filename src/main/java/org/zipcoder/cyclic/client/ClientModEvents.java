@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.lwjgl.glfw.GLFW;
+import org.zipcoder.cyclic.Config;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 
@@ -31,6 +32,6 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-        event.register(KEY_TOGGLE_NIGHT_VISION);
+        if(Config.nightVisionKey) event.register(KEY_TOGGLE_NIGHT_VISION);
     }
 }
