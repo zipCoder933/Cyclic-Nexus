@@ -14,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
-    private static final ForgeConfigSpec.BooleanValue NIGHT_VISION_KEY =
+    public static final ForgeConfigSpec.BooleanValue NIGHT_VISION_KEY =
             BUILDER.comment("If the night vision keybinding should be registered")
                     .define("client.nightVisionKey", false);
 //    private static final ForgeConfigSpec.IntValue MAGIC_NUMBER = BUILDER.comment("A magic number").defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
