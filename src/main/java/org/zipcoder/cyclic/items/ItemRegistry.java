@@ -77,7 +77,7 @@ public class ItemRegistry {
 
     //More durable than vanilla shield
     public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 1.55f)), ShieldCyclicItem.ShieldType.LEATHER));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 1.5f)), ShieldCyclicItem.ShieldType.LEATHER));
 
     //More durable than leather shield
     public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(

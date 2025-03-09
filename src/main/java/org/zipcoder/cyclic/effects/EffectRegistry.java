@@ -22,7 +22,7 @@ public class EffectRegistry {
             () -> new FreezeEffect(MobEffectCategory.HARMFUL, new Color(100,110,255).getRGB()));
 
     public static final RegistryObject<MobEffect> ATTACK_RANGE = MOB_EFFECTS.register("attack_range",
-            () -> new EmptyMobEffect(MobEffectCategory.BENEFICIAL, new Color(12, 213, 166).getRGB())
+            () -> new EmptyMobEffect(MobEffectCategory.BENEFICIAL, new Color(14, 165, 130).getRGB())
             .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "5207DE5E-7CE8-4030-940E-514C1F160890", 1.5f, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
     public static final RegistryObject<MobEffect> REACH_DISTANCE = MOB_EFFECTS.register("reach_distance",

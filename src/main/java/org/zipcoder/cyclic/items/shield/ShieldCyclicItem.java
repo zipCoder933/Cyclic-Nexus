@@ -21,8 +21,7 @@ import java.util.List;
 
 public class ShieldCyclicItem extends ShieldItem implements Equipable {
     public static enum ShieldType {
-        LEATHER, OBSIDIAN, BONE;
-        // STONE? COPPER?
+        LEATHER, OBSIDIAN, BONE
     }
 
     public static final ResourceLocation BLOCKING = new ResourceLocation("minecraft:blocking");
