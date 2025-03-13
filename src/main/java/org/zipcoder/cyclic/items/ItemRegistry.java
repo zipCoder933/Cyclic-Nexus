@@ -13,6 +13,8 @@ import org.zipcoder.cyclic.items.shield.ShieldCyclicItem;
 import org.zipcoder.cyclic.materials.ModArmorMaterials;
 import org.zipcoder.cyclic.materials.ModToolMaterials;
 
+import static org.zipcoder.cyclic.Cyclic.preInit;
+
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS
             = DeferredRegister.create(ForgeRegistries.ITEMS, Cyclic.MOD_ID);
@@ -77,15 +79,15 @@ public class ItemRegistry {
 
     //More durable than vanilla shield
     public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 1.5f)), ShieldCyclicItem.ShieldType.LEATHER));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.leatherShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.LEATHER));
 
     //More durable than leather shield
     public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 2.0f)), ShieldCyclicItem.ShieldType.BONE));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.BONE));
 
     //Most durable
     public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
-            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * 5f)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.obsidianShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.OBSIDIAN));
 
 
     //Creative gear
