@@ -29,7 +29,8 @@ public class PreInitConfig {
 
     /**
      * Default values go here
-     * Only boolean, int, and double are supported
+     * Only boolean, int, double and string are supported
+     * NO FLOATS ALLOWED!
      */
     public boolean client_nightVisionKey = false;
 
@@ -37,10 +38,10 @@ public class PreInitConfig {
     public int potion_freeze2Duration = 50;
 
     public boolean attackRange = true;
-    public float attackRange_reach = 1.25f;
+    public double attackRange_reach = 1.25f;
 
     public boolean reachDistance = true;
-    public float reachDistance_reach = 1.5f;
+    public double reachDistance_reach = 1.5f;
 
     public double leatherShieldDurabilityMultiplier = 1.5F;
     public double boneShieldDurabilityMultiplier = 2F;
