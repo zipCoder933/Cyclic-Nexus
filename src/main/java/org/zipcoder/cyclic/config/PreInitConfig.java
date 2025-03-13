@@ -29,6 +29,7 @@ public class PreInitConfig {
 
     /**
      * Default values go here
+     * Only boolean, int, and double are supported
      */
     public boolean nightVisionKey = false;
 
@@ -36,9 +37,9 @@ public class PreInitConfig {
     public int freezePotion2Duration = 50;
     public boolean attackRangePotionEnabled = true;
 
-    public float leatherShieldDurabilityMultiplier = 1.5F;
-    public float boneShieldDurabilityMultiplier = 2F;
-    public float obsidianShieldDurabilityMultiplier = 5F;
+    public double leatherShieldDurabilityMultiplier = 1.5F;
+    public double boneShieldDurabilityMultiplier = 2F;
+    public double obsidianShieldDurabilityMultiplier = 5F;
 
     /**
      * Write a new config
@@ -59,17 +60,18 @@ public class PreInitConfig {
 
     /**
      * Load the config
+     * NOTE that doubles in the config MUST have .0 at the end otherwise it will be read as an int
      */
     private void loadConfig(FileConfig config) {
         config.load();
-        nightVisionKey = config.get("client.night_vision_key");
+        nightVisionKey = config.getOrElse("client.night_vision_key", true);
 
-        freezePotion1Duration = config.get("common.potion.freeze_1_duration");
-        freezePotion2Duration = config.get("common.potion.freeze_2_duration");
-        attackRangePotionEnabled = config.get("common.potion.attack_range_potion_enabled");
+        freezePotion1Duration = config.getOrElse("common.potion.freeze_1_duration", freezePotion1Duration);
+        freezePotion2Duration = config.getOrElse("common.potion.freeze_2_duration", freezePotion2Duration);
+        attackRangePotionEnabled = config.getOrElse("common.potion.attack_range_potion_enabled", attackRangePotionEnabled);
 
-        leatherShieldDurabilityMultiplier = config.get("common.shield.leather_durability_multiplier");
-        boneShieldDurabilityMultiplier = config.get("common.shield.bone_durability_multiplier");
-        obsidianShieldDurabilityMultiplier = config.get("common.shield.obsidian_durability_multiplier");
+        leatherShieldDurabilityMultiplier = config.getOrElse("common.shield.leather_durability_multiplier", leatherShieldDurabilityMultiplier);
+        boneShieldDurabilityMultiplier = config.getOrElse("common.shield.bone_durability_multiplier", boneShieldDurabilityMultiplier);
+        obsidianShieldDurabilityMultiplier = config.getOrElse("common.shield.obsidian_durability_multiplier", obsidianShieldDurabilityMultiplier);
     }
 }
