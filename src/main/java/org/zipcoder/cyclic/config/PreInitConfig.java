@@ -51,9 +51,9 @@ public class PreInitConfig {
         config.set("common.potion.freeze_2_duration", freezePotion2Duration);
         config.set("common.potion.attack_range_potion_enabled", attackRangePotionEnabled);
 
-        config.set("common.leather_shield_durability_multiplier", leatherShieldDurabilityMultiplier);
-        config.set("common.bone_shield_durability_multiplier", boneShieldDurabilityMultiplier);
-        config.set("common.obsidian_shield_durability_multiplier", obsidianShieldDurabilityMultiplier);
+        config.set("common.shield.leather_durability_multiplier", leatherShieldDurabilityMultiplier);
+        config.set("common.shield.bone_durability_multiplier", boneShieldDurabilityMultiplier);
+        config.set("common.shield.obsidian_durability_multiplier", obsidianShieldDurabilityMultiplier);
         config.save();
     }
 
@@ -68,8 +68,8 @@ public class PreInitConfig {
         freezePotion2Duration = config.get("common.potion.freeze_2_duration");
         attackRangePotionEnabled = config.get("common.potion.attack_range_potion_enabled");
 
-        leatherShieldDurabilityMultiplier = config.get("common.leather_shield_durability_multiplier");
-        boneShieldDurabilityMultiplier = config.get("common.bone_shield_durability_multiplier");
-        obsidianShieldDurabilityMultiplier = config.get("common.obsidian_shield_durability_multiplier");
+        leatherShieldDurabilityMultiplier = config.get("common.shield.leather_durability_multiplier");
+        boneShieldDurabilityMultiplier = config.get("common.shield.bone_durability_multiplier");
+        obsidianShieldDurabilityMultiplier = config.get("common.shield.obsidian_durability_multiplier");
     }
 }
