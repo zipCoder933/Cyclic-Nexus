@@ -37,7 +37,7 @@ public class PreInitConfig {
     public int potion_freeze2Duration = 50;
 
     public boolean attackRange = true;
-    public float attackRange_reach = 1.5f;
+    public float attackRange_reach = 1.25f;
 
     public boolean reachDistance = true;
     public float reachDistance_reach = 1.5f;
