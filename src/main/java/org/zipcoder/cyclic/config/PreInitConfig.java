@@ -31,11 +31,16 @@ public class PreInitConfig {
      * Default values go here
      * Only boolean, int, and double are supported
      */
-    public boolean nightVisionKey = false;
+    public boolean client_nightVisionKey = false;
 
-    public int freezePotion1Duration = 15;
-    public int freezePotion2Duration = 50;
-    public boolean attackRangePotionEnabled = true;
+    public int potion_freeze1Duration = 15;
+    public int potion_freeze2Duration = 50;
+
+    public boolean attackRange = true;
+    public float attackRange_reach = 1.5f;
+
+    public boolean reachDistance = true;
+    public float reachDistance_reach = 1.5f;
 
     public double leatherShieldDurabilityMultiplier = 1.5F;
     public double boneShieldDurabilityMultiplier = 2F;
@@ -46,11 +51,16 @@ public class PreInitConfig {
      */
     private void writeConfig(FileConfig config) {
         //Client
-        config.set("client.night_vision_key", nightVisionKey);
+        config.set("client.night_vision_key", client_nightVisionKey);
         //Common
-        config.set("common.potion.freeze_1_duration", freezePotion1Duration);
-        config.set("common.potion.freeze_2_duration", freezePotion2Duration);
-        config.set("common.potion.attack_range_potion_enabled", attackRangePotionEnabled);
+        config.set("common.potion.freeze_1_duration", potion_freeze1Duration);
+        config.set("common.potion.freeze_2_duration", potion_freeze2Duration);
+
+        config.set("common.attackRange.attack_range_potion_enabled", attackRange);
+        config.set("common.attackRange.attack_range_multiplier", attackRange_reach);
+
+        config.set("common.reachDistance.reach_distance_potion_enabled", reachDistance);
+        config.set("common.reachDistance.reach_distance_multiplier", reachDistance_reach);
 
         config.set("common.shield.leather_durability_multiplier", leatherShieldDurabilityMultiplier);
         config.set("common.shield.bone_durability_multiplier", boneShieldDurabilityMultiplier);
@@ -64,11 +74,16 @@ public class PreInitConfig {
      */
     private void loadConfig(FileConfig config) {
         config.load();
-        nightVisionKey = config.getOrElse("client.night_vision_key", true);
+        client_nightVisionKey = config.getOrElse("client.night_vision_key", true);
 
-        freezePotion1Duration = config.getOrElse("common.potion.freeze_1_duration", freezePotion1Duration);
-        freezePotion2Duration = config.getOrElse("common.potion.freeze_2_duration", freezePotion2Duration);
-        attackRangePotionEnabled = config.getOrElse("common.potion.attack_range_potion_enabled", attackRangePotionEnabled);
+        potion_freeze1Duration = config.getOrElse("common.potion.freeze_1_duration", potion_freeze1Duration);
+        potion_freeze2Duration = config.getOrElse("common.potion.freeze_2_duration", potion_freeze2Duration);
+
+        attackRange = config.getOrElse("common.attackRange.attack_range_potion_enabled", attackRange);
+        attackRange_reach = config.getOrElse("common.attackRange.attack_range_multiplier", attackRange_reach);
+
+        reachDistance = config.getOrElse("common.reachDistance.reach_distance_potion_enabled", reachDistance);
+        reachDistance_reach = config.getOrElse("common.reachDistance.reach_distance_multiplier", reachDistance_reach);
 
         leatherShieldDurabilityMultiplier = config.getOrElse("common.shield.leather_durability_multiplier", leatherShieldDurabilityMultiplier);
         boneShieldDurabilityMultiplier = config.getOrElse("common.shield.bone_durability_multiplier", boneShieldDurabilityMultiplier);

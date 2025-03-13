@@ -13,7 +13,6 @@
   "item.cyclic.snowflake": "Snowflake",
   "item.cyclic.blue_snowflake": "Blue Snowflake",
   "item.cyclic.gold_snowflake": "Golden Snowflake",
-  "item.cyclic.prismarine_gemstone": "Prismarine Gemstone",
   "block.cyclic.flint_block": "Flint Block",
   "block.cyclic.flint_block.guide": "Crafting material compressed from nine flint",
   "block.cyclic.compressed_cobblestone": "Compressed Cobblestone",
@@ -1664,18 +1663,17 @@
   "block.water_candle": "Water Candle",
   "block.water_candle.tooltip": "Increase nearby spawns when lit",
   "block.water_candle.guide": "Light with flint and steel.  Greatly increases natural mobs spawns nearby.  Follows normal spawning rules of mobs and biome.  Has a chance of being extinguished on every spawn.  Many propertes in config file.",
-  "block.cyclic.fireplace": "Fireplace",
-  "block.cyclic.fireplace.tooltip": "Light a fire when powered, extinguish when not powered.",
-  "block.cyclic.fireplace.guide": "Lights a neverending fire on its netherrack face when powered by redstone. Extinguishes the fire when not powered.",
-  "extended.toolbelt": "key to open in tool-belt mode",
-  "item.cyclic.gem.guide.title": "Gems",
-  "item.cyclic.gem.guide": "Gems are created in the Solidification Chamber. They are used as a crafting material in many things",
+
   "item.cyclic.gem_obsidian": "Crystallized Obsidian",
   "item.cyclic.gem_obsidian.tooltip": "Crafting material",
-  "item.cyclic.gem_obsidian.guide": "Obsidian Gems are created in the Solidification Chamber.  They are used as a crafting material in many things",
+
   "item.cyclic.gem_amber": "Crystallized Amber",
   "item.cyclic.gem_amber.tooltip": "Crafting material",
-  "item.cyclic.gem_amber.guide": "Amber Gems are created in the Solidification Chamber.  They are used as a crafting material in many things",
+
+  "item.cyclic.gem_prismarine": "Prismarine Gemstone",
+  "item.cyclic.gem_tanzanite": "Tanzanite Gemstone",
+  "item.cyclic.tanzanite_shard": "Tanzanite Shard",
+
   "item.cyclic.crystal_sword": "Crystal Sword",
   "item.cyclic.crystal_pickaxe": "Crystal Pickaxe",
   "item.cyclic.crystal_shovel": "Crystal Shovel",

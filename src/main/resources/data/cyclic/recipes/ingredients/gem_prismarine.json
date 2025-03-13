@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " O ",
+    "OSO",
+    " O "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "O": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "result": {
+    "item": "cyclic:gem_prismarine"
+  }
+}

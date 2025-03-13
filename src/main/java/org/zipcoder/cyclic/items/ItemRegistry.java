@@ -25,7 +25,10 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SNOWFLAKE = ITEMS.register("snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> BLUE_SNOWFLAKE = ITEMS.register("blue_snowflake", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_SNOWFLAKE = ITEMS.register("gold_snowflake", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> PRISMARINE_GEMSTONE = ITEMS.register("prismarine_gemstone", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PRISMARINE_GEMSTONE = ITEMS.register("gem_prismarine", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TANZANITE_GEMSTONE = ITEMS.register("gem_tanzanite", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TANZANITE_SHARD = ITEMS.register("tanzanite_shard", () -> new Item(new Item.Properties()));
+//    public static final RegistryObject<Item> OBSIDIAN_GEMSTONE = ITEMS.register("gem_obsidian", () -> new Item(new Item.Properties()));
 
 
     //Scaffolding
@@ -151,10 +154,15 @@ public class ItemRegistry {
             event.accept(ItemRegistry.CREATIVE_SWORD);
 
         } else if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ItemRegistry.PRISMARINE_GEMSTONE);
             event.accept(ItemRegistry.SNOWFLAKE);
             event.accept(ItemRegistry.BLUE_SNOWFLAKE);
             event.accept(ItemRegistry.GOLD_SNOWFLAKE);
+
+            event.accept(ItemRegistry.PRISMARINE_GEMSTONE);
+
+            event.accept(ItemRegistry.TANZANITE_SHARD);
+            event.accept(ItemRegistry.TANZANITE_GEMSTONE);
+//            event.accept(ItemRegistry.OBSIDIAN_GEMSTONE);
         }
     }
 }

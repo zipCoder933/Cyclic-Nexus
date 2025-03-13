@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "OSO",
+    "OOO"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "O": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "result": {
+    "item": "cyclic:amethyst_gemstone"
+  }
+}
