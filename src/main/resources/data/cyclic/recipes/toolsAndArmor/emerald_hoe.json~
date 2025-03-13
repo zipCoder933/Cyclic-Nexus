@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-	"cc ",
+	" cc",    
     " d ",
     " d "
   ],
@@ -10,11 +10,11 @@
   		"item":"minecraft:stick"
   	},
   	"c": {
-  		"tag":"forge:ingots/copper"
+  		"item":"minecraft:emerald"
   	}
   },
   "result": {
-    "item": "cyclic:copper_hoe",
+    "item": "cyclic:emerald_hoe",
     "count": 1
   }
 }

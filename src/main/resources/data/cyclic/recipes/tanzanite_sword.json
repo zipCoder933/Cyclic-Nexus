@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-	"cc ",
-    " d ",
+	" c ",    
+    " c ",
     " d "
   ],
   "key": {
@@ -10,11 +10,11 @@
   		"item":"minecraft:stick"
   	},
   	"c": {
-  		"tag":"forge:ingots/copper"
+  		"item":"cyclic:tanzanite_shard"
   	}
   },
   "result": {
-    "item": "cyclic:copper_hoe",
+    "item": "cyclic:tanzanite_sword",
     "count": 1
   }
 }

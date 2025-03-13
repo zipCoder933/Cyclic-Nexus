@@ -41,11 +41,20 @@ public class ItemRegistry {
     public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(ModToolMaterials.COPPER, 1, -2.8f, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(ModToolMaterials.COPPER, 7, -3.4f, new Item.Properties()));
 
+    //Amethyst tools
     public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModToolMaterials.AMETHYST, 0, -2.9f, new Item.Properties()));
     public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModToolMaterials.AMETHYST, -1, -2.9f, new Item.Properties()));
-    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModToolMaterials.AMETHYST, 3, -2.9f, (new Item.Properties())));
+    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModToolMaterials.AMETHYST, 2, -2.9f, (new Item.Properties())));
     public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModToolMaterials.AMETHYST, 1, -2.9f, new Item.Properties()));
-    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModToolMaterials.AMETHYST, 5, -2.9f, new Item.Properties()));
+    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe", () -> new AxeItem(ModToolMaterials.AMETHYST, 4, -2.9f, new Item.Properties()));
+
+    //Tanzanite tools
+    public static final RegistryObject<Item> TANZANITE_SHOVEL = ITEMS.register("tanzanite_shovel", () -> new ShovelItem(ModToolMaterials.TANZANITE, 0, -2.9f, new Item.Properties()));
+    public static final RegistryObject<Item> TANZANITE_HOE = ITEMS.register("tanzanite_hoe", () -> new HoeItem(ModToolMaterials.TANZANITE, -1, -2.9f, new Item.Properties()));
+    public static final RegistryObject<Item> TANZANITE_SWORD = ITEMS.register("tanzanite_sword", () -> new SwordItem(ModToolMaterials.TANZANITE, 3, -2.9f, (new Item.Properties())));
+    public static final RegistryObject<Item> TANZANITE_PICKAXE = ITEMS.register("tanzanite_pickaxe", () -> new PickaxeItem(ModToolMaterials.TANZANITE, 1, -2.9f, new Item.Properties()));
+    public static final RegistryObject<Item> TANZANITE_AXE = ITEMS.register("tanzanite_axe", () -> new AxeItem(ModToolMaterials.TANZANITE, 5, -2.9f, new Item.Properties()));
+
 
     public static final RegistryObject<Item> EMERALD_BOOTS = ITEMS.register("emerald_boots", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
     public static final RegistryObject<Item> EMERALD_HELMET = ITEMS.register("emerald_helmet", () -> new ArmorItem(ModArmorMaterials.EMERALD_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
@@ -106,10 +115,12 @@ public class ItemRegistry {
 
             event.accept(ItemRegistry.COPPER_SWORD);
             event.accept(ItemRegistry.AMETHYST_SWORD);
+            event.accept(ItemRegistry.TANZANITE_SWORD);
             event.accept(ItemRegistry.EMERALD_SWORD);
 
             event.accept(ItemRegistry.COPPER_AXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
+            event.accept(ItemRegistry.TANZANITE_AXE);
             event.accept(ItemRegistry.EMERALD_AXE);
 
 
@@ -134,6 +145,11 @@ public class ItemRegistry {
             event.accept(ItemRegistry.AMETHYST_HOE);
             event.accept(ItemRegistry.AMETHYST_PICKAXE);
             event.accept(ItemRegistry.AMETHYST_AXE);
+
+            event.accept(ItemRegistry.TANZANITE_SHOVEL);
+            event.accept(ItemRegistry.TANZANITE_HOE);
+            event.accept(ItemRegistry.TANZANITE_PICKAXE);
+            event.accept(ItemRegistry.TANZANITE_AXE);
 
             event.accept(ItemRegistry.EMERALD_SHOVEL);
             event.accept(ItemRegistry.EMERALD_HOE);

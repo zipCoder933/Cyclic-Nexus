@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "c": {
-      "item": "minecraft:amethyst_shard"
+      "item": "cyclic:tanzanite_shard"
     }
   },
   "result": {
-    "item": "cyclic:amethyst_axe",
+    "item": "cyclic:tanzanite_axe",
     "count": 1
   }
 }

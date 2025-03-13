@@ -8,6 +8,7 @@ import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
+import org.zipcoder.cyclic.items.ItemRegistry;
 
 import java.util.List;
 
@@ -28,10 +29,26 @@ public class ModToolMaterials {
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
                     () -> Ingredient.of(Items.COPPER_INGOT)),
             new ResourceLocation(MOD_ID, "copper"),
-            List.of(Tiers.STONE), List.of(Tiers.IRON));
+            List.of(Tiers.STONE), //after
+            List.of(Tiers.IRON)); //before
 
 
     public static final Tier AMETHYST = TierSortingRegistry.registerTier(
+            //harvestLevel, uses, toolSpeed, damage, enchantability
+            //Tiers.IRON
+            new ForgeTier(
+                    2,
+                    300,
+                    Tiers.IRON.getSpeed(),
+                    1.8F,
+                    15,
+                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
+                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
+            new ResourceLocation(MOD_ID, "amethyst"),
+            List.of(Tiers.IRON), //after
+            List.of(Tiers.DIAMOND)); //before
+
+    public static final Tier TANZANITE = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
             //Tiers.IRON
             new ForgeTier(
@@ -40,9 +57,9 @@ public class ModToolMaterials {
                     Tiers.IRON.getSpeed(),
                     2.0F,
                     26,
-                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_amethyst_tool")),
-                    () -> Ingredient.of(Items.AMETHYST_SHARD)),
-            new ResourceLocation(MOD_ID, "amethyst"),
+                    BlockTags.create(new ResourceLocation(MOD_ID, "needs_tanzanite_tool")),
+                    () -> Ingredient.of(ItemRegistry.TANZANITE_SHARD.get())),
+            new ResourceLocation(MOD_ID, "tanzanite"),
             List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 
 

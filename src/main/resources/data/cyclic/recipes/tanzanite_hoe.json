@@ -10,11 +10,11 @@
   		"item":"minecraft:stick"
   	},
   	"c": {
-  		"tag":"forge:ingots/copper"
+  		"item":"cyclic:tanzanite_shard"
   	}
   },
   "result": {
-    "item": "cyclic:copper_hoe",
+    "item": "cyclic:tanzanite_hoe",
     "count": 1
   }
 }
