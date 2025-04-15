@@ -30,9 +30,10 @@
   "item.cyclic.fireball_dark": "Dark Fireball",
   "item.cyclic.fireball_dark.tooltip": "Fire in your hands",
   "item.cyclic.fireball_dark.guide": "Throwable like a fire charge.  Crafting ingredient",
-  "item.cyclic.shield_wood": "Wooden Shield",
-  "item.cyclic.shield_wood.tooltip": "Fragile shield that increases knockback ",
-  "item.cyclic.shield_wood.guide": "Gets destroyed in a single hit from explosions. Config sets this as weaker than regular shields.  ",
+
+  "item.cyclic.shield_netherite": "Netherite Shield",
+  "item.cyclic.shield_netherite.tooltip": "Extremely durable shield.",
+
   "item.cyclic.shield_flint": "Flint Shield",
   "item.cyclic.shield_flint.tooltip": "Slightly more durable than a traditional wooden shield.",
   "item.cyclic.shield_flint.guide": "Slightly more durable than a traditional wooden shield.",

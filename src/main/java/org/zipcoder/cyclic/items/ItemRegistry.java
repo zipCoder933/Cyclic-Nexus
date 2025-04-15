@@ -85,21 +85,20 @@ public class ItemRegistry {
 //    public static final RegistryObject<Item> CRYSTAL_AXE = ITEMS.register("crystal_axe", () -> new AxeItem(ModToolMaterials.GEMOBSIDIAN, 5.0F, -3.0F, new Item.Properties()));
 
     //Shields (Basically just regular shields with more durability)
-    //Shield tier is as follows: Flint, Leather, Bone, Obsidian
     //A vanilla shield has 336 durability
     private static final int VANILLA_SHIELD_DURABILITY = 336;
 
-    //More durable than vanilla shield
     public static final RegistryObject<Item> SHIELD_LEATHER = ITEMS.register("shield_leather", () -> new ShieldCyclicItem(
             new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.leatherShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.LEATHER));
 
-    //More durable than leather shield
     public static final RegistryObject<Item> SHIELD_BONE = ITEMS.register("shield_bone", () -> new ShieldCyclicItem(
             new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.boneShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.BONE));
 
-    //Most durable
     public static final RegistryObject<Item> SHIELD_OBSIDIAN = ITEMS.register("shield_obsidian", () -> new ShieldCyclicItem(
             new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.obsidianShieldDurabilityMultiplier)), ShieldCyclicItem.ShieldType.OBSIDIAN));
+
+    public static final RegistryObject<Item> SHIELD_NETHERITE = ITEMS.register("shield_netherite", () -> new ShieldCyclicItem(
+            new Item.Properties().durability((int) (VANILLA_SHIELD_DURABILITY * preInit.netheriteDurabilityMultiplier)), ShieldCyclicItem.ShieldType.OBSIDIAN));
 
 
     //Creative gear
@@ -127,6 +126,7 @@ public class ItemRegistry {
             event.accept(ItemRegistry.SHIELD_LEATHER);
             event.accept(ItemRegistry.SHIELD_BONE);
             event.accept(ItemRegistry.SHIELD_OBSIDIAN);
+            event.accept(ItemRegistry.SHIELD_NETHERITE);
 
 
             event.accept(ItemRegistry.EMERALD_BOOTS);

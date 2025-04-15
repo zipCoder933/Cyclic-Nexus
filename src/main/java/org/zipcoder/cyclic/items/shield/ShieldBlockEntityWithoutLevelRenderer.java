@@ -70,6 +70,8 @@ public class ShieldBlockEntityWithoutLevelRenderer extends BlockEntityWithoutLev
             rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_BONE : MaterialShieldRegistry.SHIELD_BASE_BONE_NOPATTERN;
         } else if (stackIn.is(ItemRegistry.SHIELD_OBSIDIAN.get())) {
             rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_OBSIDIAN : MaterialShieldRegistry.SHIELD_BASE_OBSIDIAN_NOPATTERN;
+        } else if (stackIn.is(ItemRegistry.SHIELD_NETHERITE.get())) {
+            rendermaterial = isBanner ? MaterialShieldRegistry.SHIELD_BASE_NETHERITE : MaterialShieldRegistry.SHIELD_BASE_NETHERITE_NOPATTERN;
         }
         VertexConsumer vertex = rendermaterial.sprite().wrap(ItemRenderer.getFoilBufferDirect(
                 buffer,
