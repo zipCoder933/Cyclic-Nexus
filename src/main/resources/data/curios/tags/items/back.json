@@ -1,4 +1,5 @@
 {
+  "replace": "false",
   "values": [
     "cyclic:jetpack_creative",
     "cyclic:jetpack_creative_armored",

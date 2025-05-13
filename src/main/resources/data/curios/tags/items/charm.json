@@ -120,6 +120,14 @@
     {
       "id": "cyclic:antigravity",
       "required": false
+    },
+    {
+      "id": "cyclic:charm_venom",
+      "required": false
+    },
+    {
+      "id": "cyclic:charm_boostpotion",
+      "required": false
     }
   ]
 }
