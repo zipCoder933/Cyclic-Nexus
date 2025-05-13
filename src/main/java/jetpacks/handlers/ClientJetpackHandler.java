@@ -4,6 +4,7 @@ import jetpacks.SimplyJetpacks;
 import jetpacks.config.SimplyJetpacksConfig;
 import jetpacks.item.JetpackItem;
 import jetpacks.item.JetpackType;
+import jetpacks.particle.JetpackParticleType;
 import jetpacks.sound.JetpackSound;
 import jetpacks.util.JetpackUtil;
 import jetpacks.util.Pos3D;

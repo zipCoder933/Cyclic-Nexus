@@ -4,7 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import jetpacks.config.JetpackDataHolder;
-import jetpacks.handlers.JetpackParticleType;
+import jetpacks.particle.JetpackParticleType;
 
 import java.util.EnumSet;
 

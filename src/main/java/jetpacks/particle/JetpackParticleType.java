@@ -1,4 +1,4 @@
-package jetpacks.handlers;
+package jetpacks.particle;
 
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -7,7 +7,7 @@ public enum JetpackParticleType {
 
     NONE(null),
     FLAME(ParticleTypes.FLAME),
-    CLOUD(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE),
+    CLOUD(ParticleTypes.CAMPFIRE_COSY_SMOKE),
 //    SMOKE(ParticleTypes.SMOKE),
     ;
 

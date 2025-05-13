@@ -154,7 +154,7 @@ public class SimplyJetpacksConfig {
     }
 
     private static void setupServerConfig() {
-        SERVER_BUILDER.comment("Simply Jetpacks 2 - Server Configurations").push("" + MOD_ID + "-server");
+        SERVER_BUILDER.comment("Simply Jetpacks 2 - Server Configurations").push(MOD_ID + "-jetpack-server");
         //JetpackConfig.createJetpackConfig(SERVER_BUILDER);
         SERVER_BUILDER.pop();
     }
@@ -171,26 +171,8 @@ public class SimplyJetpacksConfig {
         SimplyJetpacks.LOGGER.info("Config Loaded: {}", configEvent.getConfig().getFileName());
 
         // Prevent loading of jetpack configs before common config has been loaded by system.
-        if (configEvent.getConfig().getFileName().equals("" + MOD_ID + "-common.toml")) {
+        if (configEvent.getConfig().getFileName().equals(MOD_ID + "-jetpack-common.toml")) {
             JetpackType.loadAllConfigs();
-        }
-    }
-
-    @SubscribeEvent
-    public static void onFileChange(final ModConfigEvent.Reloading configEvent) {
-        SimplyJetpacks.LOGGER.info("Config Re-Loaded: {}", configEvent.getConfig().getFileName());
-
-        if (configEvent.getConfig().getFileName().equals("" + MOD_ID + "-common.toml")) {
-            // Ensure config is only reloaded for the server side
-            if (FMLEnvironment.dist.isDedicatedServer() || Minecraft.getInstance().isLocalServer()) {
-
-                List<ServerPlayer> playerList = ServerLifecycleHooks.getCurrentServer().getPlayerList().getPlayers();
-                SimplyJetpacks.LOGGER.info("Server jetpack config updated. Syncing {} player(s) configs.", playerList.size());
-                for (Player player : playerList) {
-                    sendServerConfigFiles(player);
-                }
-                SimplyJetpacks.LOGGER.info("Finished syncing server jetpack configs.");
-            }
         }
     }
 

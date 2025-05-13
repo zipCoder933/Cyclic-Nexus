@@ -29,15 +29,12 @@ import jetpacks.energy.IEnergyContainer;
 import jetpacks.handlers.CommonJetpackHandler;
 import jetpacks.handlers.RegistryHandler;
 import jetpacks.ui.IHUDInfoProvider;
-import jetpacks.handlers.JetpackParticleType;
 import org.zipcoder.cyclic.utils.mixin.I_ServerGamePacketListenerImpl;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
-
-import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 
 public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyContainer {
 
