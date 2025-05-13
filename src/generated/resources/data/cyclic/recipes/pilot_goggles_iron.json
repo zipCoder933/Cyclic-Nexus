@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": {
+      "tag": "forge:glass_panes"
+    },
+    "I": {
+      "tag": "forge:ingots/iron"
+    },
+    "S": {
+      "item": "cyclic:leather_strap"
+    }
+  },
+  "pattern": [
+    " S ",
+    "GIG"
+  ],
+  "result": {
+    "item": "cyclic:pilot_goggles_iron"
+  }
+}

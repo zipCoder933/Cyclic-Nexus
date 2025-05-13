@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cyclic:jetpack_vanilla3"
+    },
+    {
+      "item": "minecraft:diamond_chestplate"
+    }
+  ],
+  "result": {
+    "item": "cyclic:jetpack_vanilla3_armored"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "cyclic:cyclic/jetpack_vanilla1",
+  "criteria": {
+    "has_jetpack": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cyclic:jetpack_vanilla2"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.cyclic.jetpack_vanilla2.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "cyclic:jetpack_vanilla2"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.cyclic.jetpack_vanilla2.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_jetpack"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

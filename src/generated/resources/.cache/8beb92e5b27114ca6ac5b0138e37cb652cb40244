@@ -1,0 +1,5 @@
+// 1.20.1	2025-05-13T07:31:25.6482278	Tags for minecraft:item mod id cyclic
+f8d507e3f81c3bc8a7e044449a19a231a95e97c2 data/curios/tags/items/head.json
+1d053ab32324680198a087dcb360657ac89c8204 data/curios/tags/items/jetpack.json
+d1227d85e60b1d5f0bdb97a83ca0719f1f119bb5 data/cyclic/tags/items/jetpack.json
+294c7cd6fbfb5349db6cae0e103b0976eabc881b data/cyclic/tags/items/particles.json

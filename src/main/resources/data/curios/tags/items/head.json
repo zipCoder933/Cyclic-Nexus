@@ -2,6 +2,14 @@
   "replace": "false",
   "values": [
     {
+      "id": "cyclic:pilot_goggles_gold",
+      "required": false
+    },
+    {
+      "id": "cyclic:pilot_goggles_iron",
+      "required": false
+    },
+    {
       "id": "cyclic:glowing_helmet",
       "required": false
     },

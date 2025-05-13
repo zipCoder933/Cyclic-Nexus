@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "tag": "forge:dyes/blue"
+    },
+    "G": {
+      "tag": "forge:dyes/green"
+    },
+    "P": {
+      "item": "cyclic:particle_blend"
+    },
+    "R": {
+      "tag": "forge:dyes/red"
+    }
+  },
+  "pattern": [
+    " R ",
+    " P ",
+    "G B"
+  ],
+  "result": {
+    "item": "cyclic:particle_rainbow"
+  }
+}

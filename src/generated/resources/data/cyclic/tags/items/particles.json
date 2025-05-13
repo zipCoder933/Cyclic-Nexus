@@ -1,0 +1,10 @@
+{
+  "values": [
+    "cyclic:particle_none",
+    "cyclic:particle_flame",
+    "cyclic:particle_smoke",
+    "cyclic:particle_rainbow",
+    "cyclic:particle_soul",
+    "cyclic:particle_snow"
+  ]
+}

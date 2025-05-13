@@ -21,6 +21,7 @@ import org.zipcoder.cyclic.events.EventRegistry;
 import org.zipcoder.cyclic.items.ItemRegistry;
 import org.zipcoder.cyclic.potions.PotionsRegistry;
 import org.zipcoder.cyclic.sound.SoundRegistry;
+import jetpacks.SimplyJetpacks;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Cyclic.MOD_ID)
@@ -58,6 +59,8 @@ public class Cyclic {
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        new SimplyJetpacks();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

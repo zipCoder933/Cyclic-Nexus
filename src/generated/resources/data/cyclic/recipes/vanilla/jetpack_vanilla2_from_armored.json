@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cyclic:jetpack_vanilla2_armored"
+    }
+  ],
+  "result": {
+    "item": "cyclic:jetpack_vanilla2"
+  }
+}

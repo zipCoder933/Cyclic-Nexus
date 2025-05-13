@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "cyclic:particle_blend"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TPT",
+    " T "
+  ],
+  "result": {
+    "item": "cyclic:particle_flame"
+  }
+}

@@ -6,7 +6,8 @@
   "refmap": "cyclic.refmap.json",
   "mixins": [
     "OptionInstanceMixin",
-    "BlockEntityWithoutLevelRendererMixin"
+    "BlockEntityWithoutLevelRendererMixin",
+    "ServerGamePacketListenerImplMixin"
   ],
   "client": [
   ],
