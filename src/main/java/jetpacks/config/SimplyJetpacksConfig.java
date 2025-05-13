@@ -171,7 +171,7 @@ public class SimplyJetpacksConfig {
         SimplyJetpacks.LOGGER.info("Config Loaded: {}", configEvent.getConfig().getFileName());
 
         // Prevent loading of jetpack configs before common config has been loaded by system.
-        if (configEvent.getConfig().getFileName().equals(MOD_ID + "-jetpack-common.toml")) {
+        if (configEvent.getConfig().getFileName().equals(MOD_ID + "-common.toml")) {
             JetpackType.loadAllConfigs();
         }
     }
