@@ -113,12 +113,12 @@ public class CuriosIntegration {
                 return true;
             }
 
-            @Override
-            public void curioTick(String identifier, int index, LivingEntity livingEntity) {
-                if (livingEntity instanceof Player) {
-                    itemStack.onArmorTick(livingEntity.getCommandSenderWorld(), (Player) livingEntity);
-                }
-            }
+//            @Override
+//            public void curioTick(String identifier, int index, LivingEntity livingEntity) {
+//                if (livingEntity instanceof Player) {
+//                    itemStack.onArmorTick(livingEntity.getCommandSenderWorld(), (Player) livingEntity);
+//                }
+//            }
 
             @Override
             public boolean canSync(String identifier, int index, LivingEntity livingEntity) {

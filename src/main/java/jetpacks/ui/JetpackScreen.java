@@ -1,7 +1,6 @@
-package jetpacks.screen;
+package jetpacks.ui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import jetpacks.SimplyJetpacks;
 import jetpacks.handlers.KeybindForgeBusHandler;
 import jetpacks.item.JetpackItem;
 import jetpacks.network.NetworkHandler;
@@ -45,8 +44,8 @@ public class JetpackScreen extends Screen {
         super(Component.translatable("screen."+MOD_ID+".jetpack_screen.title"));
         this.width = WIDTH;
         this.height = HEIGHT;
-        this.jetpackItem = (JetpackItem) JetpackUtil.getFromBothSlots(minecraft.player).getItem();
-        this.jetpackStack = JetpackUtil.getFromBothSlots(minecraft.player);
+        this.jetpackItem = (JetpackItem) JetpackUtil.getFromChestAndCurios(minecraft.player).getItem();
+        this.jetpackStack = JetpackUtil.getFromChestAndCurios(minecraft.player);
     }
 
     @Override
@@ -110,18 +109,6 @@ public class JetpackScreen extends Screen {
         int barOffset = 78 - amount;
         int barX = 0;
         boolean useGradient = false;
-
-        switch (jetpackItem.getModId()) {
-            case ("mek"):
-                barX = 28;
-                break;
-            case ("ie"):
-                barX = 56;
-                useGradient = true;
-                break;
-            case ("sj"):
-                break;
-        }
 
         if (jetpackItem.isCreative) {
             graphics.blit(JETPACK_TEXTURE, relX + 10, relY + 16, 70, 178, 14, 78);

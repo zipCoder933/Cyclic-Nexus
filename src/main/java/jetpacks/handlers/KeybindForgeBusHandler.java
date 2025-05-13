@@ -5,7 +5,7 @@ import jetpacks.config.SimplyJetpacksConfig;
 import jetpacks.item.JetpackItem;
 import jetpacks.network.NetworkHandler;
 import jetpacks.network.packets.*;
-import jetpacks.screen.JetpackScreen;
+import jetpacks.ui.JetpackScreen;
 import jetpacks.util.JetpackUtil;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -43,7 +43,7 @@ public class KeybindForgeBusHandler {
         if (player == null || event.getAction() != InputConstants.PRESS || Minecraft.getInstance().screen != null) {
             return;
         }
-        ItemStack chestStack = JetpackUtil.getFromBothSlots(player);
+        ItemStack chestStack = JetpackUtil.getFromChestAndCurios(player);
         Item chestItem = null;
         JetpackItem jetpack;
         if (!chestStack.isEmpty()) {
@@ -78,6 +78,7 @@ public class KeybindForgeBusHandler {
     private static void tickEnd() {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player != null) {
+            //Update the state and send to server
             boolean flyState = mc.player.input.jumping;
             boolean invertHover = SimplyJetpacksConfig.invertHoverSneakingBehavior.get();
             boolean descendState = mc.player.input.shiftKeyDown;

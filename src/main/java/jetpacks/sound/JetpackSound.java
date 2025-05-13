@@ -22,8 +22,6 @@ public class JetpackSound extends AbstractTickableSoundInstance {
     private int fadeOut = -1;
 
     public JetpackSound(Player player) {
-//        super(SJSounds.JETPACK, SoundSource.PLAYERS, RandomSource.create());
-        // TODO: test this
         super(RegistryHandler.JETPACK_SOUND.get(), SoundSource.PLAYERS, RandomSource.create());
         this.player = player;
         this.looping = true;
@@ -43,16 +41,14 @@ public class JetpackSound extends AbstractTickableSoundInstance {
         this.x = (float) pos.x();
         this.y = (float) pos.y();// - 10;
         this.z = (float) pos.z();
-        if (this.fadeOut < 0 && !ClientJetpackHandler.isFlying(this.player)) {
+        if (this.fadeOut < 0) {
             this.fadeOut = 0;
             synchronized (PLAYING_FOR) {
                 PLAYING_FOR.remove(this.player.getId());
             }
-        } else
-        if (this.fadeOut >= 5) {
+        } else if (this.fadeOut >= 5) {
             this.stop();
-        } else
-        if (this.fadeOut >= 0) {
+        } else {
             this.volume = 1.0F - this.fadeOut / 5F;
             this.fadeOut++;
         }

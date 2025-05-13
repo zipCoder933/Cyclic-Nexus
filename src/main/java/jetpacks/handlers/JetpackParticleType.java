@@ -1,4 +1,4 @@
-package jetpacks.particle;
+package jetpacks.handlers;
 
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;

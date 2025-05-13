@@ -7,21 +7,29 @@ import net.minecraftforge.fml.ModList;
 import org.apache.commons.lang3.tuple.ImmutableTriple;
 import jetpacks.item.JetpackItem;
 import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotResult;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 
 public class JetpackUtil {
 
     private final static boolean curiosLoaded = ModList.get().isLoaded("curios");
 
-    public static ItemStack getFromBothSlots(Player player) {
+    public static ItemStack getFromChestAndCurios(Player player) {
         ItemStack jetpackItem = getFromChest(player);
 
         if (jetpackItem == ItemStack.EMPTY && curiosLoaded) {
-//            CuriosApi.getCuriosInventory(player).ifPresent(curiosInventory -> jetpackItem = curiosInventory.getStackInSlot(0));
-            return CuriosApi.getCuriosHelper()
-                    .findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player)
-                    .map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
-        }
+            //https://docs.illusivesoulworks.com/1.20.x/curios/inventory/basic-inventory
+            ICuriosItemHandler curiosInventory = CuriosApi.getCuriosInventory(player).resolve().get();
+            SlotResult slotResult = curiosInventory
+                    .findFirstCurio(stack -> stack.getItem() instanceof JetpackItem)
+                    .orElse(null);
+            if (slotResult != null) return slotResult.stack();
 
+
+//            return CuriosApi.getCuriosHelper()
+//                    .findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player)
+//                    .map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
+        }
         return jetpackItem;
     }
 
@@ -37,7 +45,8 @@ public class JetpackUtil {
      *
      * */
     public static boolean checkTickForEquippedSlot(int index, ItemStack which, Player player) {
-        boolean isNormalChestSlotCorrect = index == EquipmentSlot.CHEST.getIndex() && player.getItemBySlot(EquipmentSlot.CHEST) == which;
+        boolean isNormalChestSlotCorrect = index == EquipmentSlot.CHEST.getIndex()
+                && player.getItemBySlot(EquipmentSlot.CHEST) == which;
         int checkCuriosFlag = checkCuriosSlot(which, player);
 
         if (checkCuriosFlag >= 0) {

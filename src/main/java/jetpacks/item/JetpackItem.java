@@ -28,8 +28,8 @@ import jetpacks.energy.EnergyStorageImpl;
 import jetpacks.energy.IEnergyContainer;
 import jetpacks.handlers.CommonJetpackHandler;
 import jetpacks.handlers.RegistryHandler;
-import jetpacks.hud.IHUDInfoProvider;
-import jetpacks.particle.JetpackParticleType;
+import jetpacks.ui.IHUDInfoProvider;
+import jetpacks.handlers.JetpackParticleType;
 import org.zipcoder.cyclic.utils.mixin.I_ServerGamePacketListenerImpl;
 
 import javax.annotation.Nonnull;
@@ -85,7 +85,8 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity holder, int vanillaIndex, boolean selected) {
-        if (holder instanceof Player player && !player.isSpectator()
+        if (holder instanceof Player player
+                && !player.isSpectator()
                 && !player.getAbilities().flying
                 && JetpackUtil.checkTickForEquippedSlot(vanillaIndex, stack, player)) {
 
@@ -118,16 +119,6 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
         return jetpackType.getRarity();
     }
 
-    public String getModId() {
-        String name = jetpackType.getName();
-        if (name.contains("mek")) {
-            return "mek";
-        }
-        if (name.contains("ie")) {
-            return "ie";
-        }
-        return "sj";
-    }
 
     public boolean isEngineOn(ItemStack stack) {
         return NBTUtil.getBoolean(stack, Constants.TAG_ENGINE);
@@ -263,16 +254,6 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
         return jetpackType.getEnergyUsage();
     }
 
-    public static ItemStack setParticleId(ItemStack stack, ItemStack particle) {
-        String key = particle.getDescriptionId().split("item." + MOD_ID + ".particle_")[1].toUpperCase();
-        int id = JetpackParticleType.valueOf(key).ordinal();
-        NBTUtil.setInt(stack, Constants.TAG_PARTICLE, id);
-        return stack;
-    }
-
-    public static void setParticleId(ItemStack stack, int id) {
-        NBTUtil.setInt(stack, Constants.TAG_PARTICLE, id);
-    }
 
     public static int getParticleId(ItemStack stack) {
         return stack.getOrCreateTag().contains(Constants.TAG_PARTICLE) ? stack.getOrCreateTag().getInt(Constants.TAG_PARTICLE) : JetpackType.getDefaultParticles(stack);
@@ -402,7 +383,6 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
                         if (player instanceof ServerPlayer) {
                             I_ServerGamePacketListenerImpl mixinObj = (I_ServerGamePacketListenerImpl) ((ServerPlayer) player).connection;
                             mixinObj.setAboveGroundTickCount(0);
-//                            ((ServerPlayer) player).connection.aboveGroundTickCount = 0;
                         }
                     }
                 }

@@ -1,4 +1,4 @@
-package jetpacks.hud;
+package jetpacks.ui;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;

@@ -24,7 +24,7 @@ import jetpacks.handlers.ClientJetpackHandler;
 import jetpacks.handlers.CommonJetpackHandler;
 import jetpacks.handlers.KeybindForgeBusHandler;
 import jetpacks.handlers.RegistryHandler;
-import jetpacks.hud.HUDHandler;
+import jetpacks.ui.HUDHandler;
 import jetpacks.integration.CuriosIntegration;
 import jetpacks.item.JetpackItem;
 import jetpacks.item.PilotGogglesItem;

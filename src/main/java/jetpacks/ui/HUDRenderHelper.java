@@ -1,4 +1,4 @@
-package jetpacks.hud;
+package jetpacks.ui;
 
 import com.mojang.blaze3d.platform.Window;
 import jetpacks.SimplyJetpacks;

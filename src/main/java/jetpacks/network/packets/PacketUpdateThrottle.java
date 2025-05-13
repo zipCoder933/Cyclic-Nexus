@@ -30,7 +30,7 @@ public class PacketUpdateThrottle {
         ctx.get().enqueueWork(() -> {
             ServerPlayer player = ctx.get().getSender();
             if (player != null) {
-                ItemStack stack = JetpackUtil.getFromBothSlots(player);
+                ItemStack stack = JetpackUtil.getFromChestAndCurios(player);
                 Item item = stack.getItem();
                 if (item instanceof JetpackItem) {
                     JetpackItem jetpack = (JetpackItem) item;

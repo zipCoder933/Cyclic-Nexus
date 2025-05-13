@@ -1,4 +1,4 @@
-package jetpacks.hud;
+package jetpacks.ui;
 
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -10,7 +10,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
-import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import jetpacks.config.SimplyJetpacksConfig;
 
@@ -23,7 +22,7 @@ public final class HUDHandler {
         var minecraft = Minecraft.getInstance();
         if (SimplyJetpacksConfig.enableJetpackHud.get() && !minecraft.options.hideGui && !minecraft.options.renderDebug) {
             if (minecraft.player != null) {
-                ItemStack chestplate = JetpackUtil.getFromBothSlots(minecraft.player);
+                ItemStack chestplate = JetpackUtil.getFromChestAndCurios(minecraft.player);
                 Item item = chestplate.getItem();
 
                 if (!chestplate.isEmpty() && item instanceof JetpackItem) {
@@ -52,6 +51,6 @@ public final class HUDHandler {
 
     @SubscribeEvent
     public void registerOverlays(RegisterGuiOverlaysEvent event) {
-        event.registerAbove(VanillaGuiOverlay.HOTBAR.id(), "hud", HUD_OVERLAY);
+       // event.registerAbove(VanillaGuiOverlay.HOTBAR.id(), "hud", HUD_OVERLAY);
     }
 }
