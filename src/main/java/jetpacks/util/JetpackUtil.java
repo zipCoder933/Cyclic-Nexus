@@ -10,34 +10,32 @@ import top.theillusivec4.curios.api.CuriosApi;
 
 public class JetpackUtil {
 
+    private final static boolean curiosLoaded = ModList.get().isLoaded("curios");
+
     public static ItemStack getFromBothSlots(Player player) {
-        ItemStack jetpackItem = ItemStack.EMPTY;
-        if (ModList.get().isLoaded("curios")) {
-            jetpackItem = CuriosApi.getCuriosHelper().findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player).map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
+        ItemStack jetpackItem = getFromChest(player);
+
+        if (jetpackItem == ItemStack.EMPTY && curiosLoaded) {
+//            CuriosApi.getCuriosInventory(player).ifPresent(curiosInventory -> jetpackItem = curiosInventory.getStackInSlot(0));
+            return CuriosApi.getCuriosHelper()
+                    .findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player)
+                    .map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
         }
-        return jetpackItem == ItemStack.EMPTY ? getFromChest(player) : jetpackItem;
+
+        return jetpackItem;
     }
 
     public static ItemStack getFromChest(Player player) {
         return player.getItemBySlot(EquipmentSlot.CHEST);
     }
 
-    public static void removeFromBothSlots(Player player) {
-        if (ModList.get().isLoaded("curios")) {
-            ItemStack itemStack = CuriosApi.getCuriosHelper().findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player).map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
-            CuriosApi.getCuriosHelper().getCurio(itemStack).ifPresent(p -> p.curioBreak(itemStack, player));
-        } else {
-            player.getInventory().removeItem(getFromChest(player));
-        }
-    }
-
     /*
-    * Train of thought:
-    * Curios slot has priority
-    * - If a jetpack is in the curios slot, only use this jetpack
-    * - Jetpack must be identified by item stack match
-    *
-    * */
+     * Train of thought:
+     * Curios slot has priority
+     * - If a jetpack is in the curios slot, only use this jetpack
+     * - Jetpack must be identified by item stack match
+     *
+     * */
     public static boolean checkTickForEquippedSlot(int index, ItemStack which, Player player) {
         boolean isNormalChestSlotCorrect = index == EquipmentSlot.CHEST.getIndex() && player.getItemBySlot(EquipmentSlot.CHEST) == which;
         int checkCuriosFlag = checkCuriosSlot(which, player);
@@ -58,7 +56,7 @@ public class JetpackUtil {
     // 1 if curios and any jetpack item in slot
     // 2 if curios and correct slot
     private static int checkCuriosSlot(ItemStack which, Player player) {
-        if (ModList.get().isLoaded("curios")) {
+        if (curiosLoaded) {
             ItemStack curioStack = CuriosApi.getCuriosHelper().findEquippedCurio(stack -> stack.getItem() instanceof JetpackItem, player)
                     .map(ImmutableTriple::getRight).orElse(ItemStack.EMPTY);
             if (curioStack.isEmpty()) {

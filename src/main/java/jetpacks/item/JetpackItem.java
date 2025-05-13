@@ -43,15 +43,19 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
 
     private final JetpackType jetpackType;
     public final int tier;
+    public final boolean isCreative;
 
-    public JetpackItem(JetpackType jetpackType) {
+    public JetpackItem(JetpackType jetpackType, boolean isCreative) {
         super(jetpackType.isArmored() ? JetpackArmorMaterial.JETPACK_ARMORED : JetpackArmorMaterial.JETPACK, Type.CHESTPLATE, new Properties().setNoRepair());
+
+        this.isCreative = isCreative;
         this.jetpackType = jetpackType;
         this.tier = jetpackType.getTier();
     }
 
-    public JetpackItem(JetpackType jetpackType, JetpackArmorMaterial material) {
+    public JetpackItem(JetpackType jetpackType, JetpackArmorMaterial material, boolean isCreative) {
         super(material, Type.CHESTPLATE, new Properties());
+        this.isCreative = isCreative;
         this.jetpackType = jetpackType;
         this.tier = jetpackType.getTier();
     }
@@ -98,9 +102,6 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
         return jetpackType;
     }
 
-    public boolean isCreative() {
-        return jetpackType.getName().contains("creative");
-    }
 
     @Override
     public int getEnchantmentValue() {
@@ -109,7 +110,7 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        return super.isFoil(stack) || isCreative();
+        return super.isFoil(stack) || isCreative;
     }
 
     @Override
@@ -224,7 +225,7 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
 
     @Override
     public boolean isBarVisible(ItemStack stack) {
-        return !isCreative() && getEnergy(stack) > 0;
+        return !isCreative && getEnergy(stack) > 0;
     }
 
     @Override
@@ -302,7 +303,7 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
 
     public void chargeInventory(Player player, ItemStack stack) {
         if (!player.getCommandSenderWorld().isClientSide) {
-            if (getEnergy(stack) > 0 || isCreative()) {
+            if (getEnergy(stack) > 0 || isCreative) {
                 // Charge hands
                 for (ItemStack itemStack : player.getHandSlots()) {
                     charge(stack, itemStack);
@@ -320,7 +321,7 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
             LazyOptional<IEnergyStorage> optional = item.getCapability(ForgeCapabilities.ENERGY);
             if (optional.isPresent()) {
                 IEnergyStorage energyStorage = optional.orElseThrow(IllegalStateException::new);
-                if (isCreative()) {
+                if (isCreative) {
                     energyStorage.receiveEnergy(1000, false);
                 } else {
                     useEnergy(jetpack, energyStorage.receiveEnergy(getEnergyUsage(jetpack), false));
@@ -360,11 +361,11 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
             speedVerticalHoverSlow = jetpackType.getSpeedVerticalHoverSlow();
 
             if ((flyKeyDown || hoverMode && !player.onGround())) {
-                if (!isCreative()) {
+                if (!isCreative) {
                     int amount = (int) (player.isSprinting() ? Math.round(getEnergyUsage(stack) * jetpackType.getSprintEnergyModifier()) : getEnergyUsage(stack));
                     useEnergy(stack, amount);
                 }
-                if (getEnergy(stack) > 0 || isCreative()) {
+                if (getEnergy(stack) > 0 || isCreative) {
                     if (flyKeyDown) {
                         if (!hoverMode) {
                             fly(player, Math.min(player.getDeltaMovement().get(Direction.Axis.Y) + currentAccel, currentSpeedVertical));
@@ -408,7 +409,7 @@ public class JetpackItem extends ArmorItem implements IHUDInfoProvider, IEnergyC
             }
         }
         if (!player.getCommandSenderWorld().isClientSide && this.isEHoverOn(stack)) {
-            if ((item.getEnergy(stack) > 0 || this.isCreative()) && (!this.isHoverOn(stack) || !this.isEngineOn(stack))) {
+            if ((item.getEnergy(stack) > 0 || this.isCreative) && (!this.isHoverOn(stack) || !this.isEngineOn(stack))) {
                 if (player.position().get(Direction.Axis.Y) < -69) {
                     this.doEHover(stack, player);
                 } else {

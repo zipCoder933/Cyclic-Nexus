@@ -67,7 +67,7 @@ public class SJTextUtil {
     public static void addBaseInfo(ItemStack stack, List<Component> list) {
         JetpackItem jetpack = (JetpackItem) stack.getItem();
         list.add(translate("tooltip", "tier", jetpack.tier));
-        if (jetpack.isCreative()) {
+        if (jetpack.isCreative) {
             list.add(translate("tooltip", "infiniteEnergy", ChatFormatting.LIGHT_PURPLE));
         } else {
             list.add(energyWithMax(jetpack.getEnergy(stack), jetpack.getCapacity(stack)));
@@ -84,7 +84,7 @@ public class SJTextUtil {
         if (jetpack.getJetpackType().getChargerMode()) {
             list.add(translate("tooltip", "itemJetpack.charger", ChatFormatting.GOLD, jetpack.isChargerOn(stack) ? on : off));
         }
-        if (!jetpack.isCreative()) {
+        if (!jetpack.isCreative) {
             list.add(translate("tooltip", "itemJetpack.energyUsage", ChatFormatting.GOLD, energyPerTick(jetpack.getEnergyUsage(stack))));
         }
         Component particle = translate("tooltip", "particle." + JetpackItem.getParticleId(stack), ChatFormatting.WHITE);
@@ -105,7 +105,7 @@ public class SJTextUtil {
 
     public static Component getEnergyText(ItemStack stack) {
         JetpackItem jetpack = (JetpackItem) stack.getItem();
-        if (jetpack.isCreative()) {
+        if (jetpack.isCreative) {
             return translate("hud", "energyDisplay", translate("hud", "infiniteEnergy", ChatFormatting.LIGHT_PURPLE));
         }
         int percent = (int) Math.ceil((double) jetpack.getEnergy(stack) / (double) jetpack.getCapacity(stack) * 100D);

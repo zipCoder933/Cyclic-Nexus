@@ -150,45 +150,45 @@ public class SimplyJetpacksConfig {
     private static void setupCommonConfig() {
         COMMON_BUILDER.comment("Simply Jetpacks 2 - Common Configurations").push(""+MOD_ID+"-common");
 
-        COMMON_BUILDER.comment("Integration Configurations").push("integration");
+//        COMMON_BUILDER.comment("Integration Configurations").push("integration");
 
-        enableIntegrationVanilla = COMMON_BUILDER
-                .comment("Enable Vanilla Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationVanilla")
-                .worldRestart()
-                .define("enableIntegrationVanilla", ConfigDefaults.enableIntegrationVanilla);
+//        enableIntegrationVanilla = COMMON_BUILDER
+//                .comment("Enable Vanilla Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationVanilla")
+//                .worldRestart()
+//                .define("enableIntegrationVanilla", ConfigDefaults.enableIntegrationVanilla);
+//
+//        enableIntegrationImmersiveEngineering = COMMON_BUILDER
+//                .comment("Enable Immersive Engineering Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationImmersiveEngineering")
+//                .worldRestart()
+//                .define("enableIntegrationImmersiveEngineering", ConfigDefaults.enableIntegrationImmersiveEngineering);
+//
+//        enableIntegrationMekanism = COMMON_BUILDER
+//                .comment("Enable Mekanism Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationMekanism")
+//                .worldRestart()
+//                .define("enableIntegrationMekanism", ConfigDefaults.enableIntegrationMekanism);
+//
+//        enableIntegrationEnderIO = COMMON_BUILDER
+//                .comment("Enable EnderIO Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationEnderIO")
+//                .worldRestart()
+//                .define("enableIntegrationEnderIO", ConfigDefaults.enableIntegrationEnderIO);
 
-        enableIntegrationImmersiveEngineering = COMMON_BUILDER
-                .comment("Enable Immersive Engineering Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationImmersiveEngineering")
-                .worldRestart()
-                .define("enableIntegrationImmersiveEngineering", ConfigDefaults.enableIntegrationImmersiveEngineering);
-
-        enableIntegrationMekanism = COMMON_BUILDER
-                .comment("Enable Mekanism Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationMekanism")
-                .worldRestart()
-                .define("enableIntegrationMekanism", ConfigDefaults.enableIntegrationMekanism);
-
-        enableIntegrationEnderIO = COMMON_BUILDER
-                .comment("Enable EnderIO Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationEnderIO")
-                .worldRestart()
-                .define("enableIntegrationEnderIO", ConfigDefaults.enableIntegrationEnderIO);
-
-        enableIntegrationThermalExpansion = COMMON_BUILDER
-                .comment("Enable Thermal Expansion Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationThermalExpansion")
-                .worldRestart()
-                .define("enableIntegrationThermalExpansion", ConfigDefaults.enableIntegrationThermalExpansion);
-
-        enableIntegrationThermalDynamics = COMMON_BUILDER
-                .comment("Enable Thermal Dynamics Jetpacks Integration.")
-                .translation("config."+MOD_ID+".enableIntegrationThermalDynamics")
-                .worldRestart()
-                .define("enableIntegrationThermalDynamics", ConfigDefaults.enableIntegrationThermalDynamics);
-
-        COMMON_BUILDER.pop();
+//        enableIntegrationThermalExpansion = COMMON_BUILDER
+//                .comment("Enable Thermal Expansion Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationThermalExpansion")
+//                .worldRestart()
+//                .define("enableIntegrationThermalExpansion", ConfigDefaults.enableIntegrationThermalExpansion);
+//
+//        enableIntegrationThermalDynamics = COMMON_BUILDER
+//                .comment("Enable Thermal Dynamics Jetpacks Integration.")
+//                .translation("config."+MOD_ID+".enableIntegrationThermalDynamics")
+//                .worldRestart()
+//                .define("enableIntegrationThermalDynamics", ConfigDefaults.enableIntegrationThermalDynamics);
+//
+//        COMMON_BUILDER.pop();
 
         COMMON_BUILDER.comment("Jetpack Tuning Configurations").push("tuning");
         JetpackConfig.createJetpackConfig(COMMON_BUILDER);
@@ -196,10 +196,10 @@ public class SimplyJetpacksConfig {
 
         COMMON_BUILDER.comment("Misc Configurations").push("misc");
 
-        enableJoinAdvancements = COMMON_BUILDER
-                .comment("Enable Advancements on Player join.")
-                .translation("config."+MOD_ID+".enableJoinAdvancements")
-                .define("enableJoinAdvancements", ConfigDefaults.enableJoinAdvancements);
+//        enableJoinAdvancements = COMMON_BUILDER
+//                .comment("Enable Advancements on Player join.")
+//                .translation("config."+MOD_ID+".enableJoinAdvancements")
+//                .define("enableJoinAdvancements", ConfigDefaults.enableJoinAdvancements);
 
         COMMON_BUILDER.pop();
         COMMON_BUILDER.pop();
@@ -265,13 +265,13 @@ public class SimplyJetpacksConfig {
     public static ForgeConfigSpec.EnumValue<ConfigDefaults.HUDPosition> hudTextPosition;
 
     // Common
-    public static ForgeConfigSpec.BooleanValue enableIntegrationVanilla;
-    public static ForgeConfigSpec.BooleanValue enableIntegrationImmersiveEngineering;
-    public static ForgeConfigSpec.BooleanValue enableIntegrationMekanism;
-    public static ForgeConfigSpec.BooleanValue enableIntegrationEnderIO;
-    public static ForgeConfigSpec.BooleanValue enableIntegrationThermalExpansion;
-    public static ForgeConfigSpec.BooleanValue enableIntegrationThermalDynamics;
-    public static ForgeConfigSpec.BooleanValue enableJoinAdvancements;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationVanilla;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationImmersiveEngineering;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationMekanism;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationEnderIO;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationThermalExpansion;
+//    public static ForgeConfigSpec.BooleanValue enableIntegrationThermalDynamics;
+//    public static ForgeConfigSpec.BooleanValue enableJoinAdvancements;
 
     // Server
 }

@@ -20,7 +20,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import jetpacks.config.SimplyJetpacksConfig;
-import jetpacks.crafting.JetpackCraftingEvents;
 import jetpacks.handlers.ClientJetpackHandler;
 import jetpacks.handlers.CommonJetpackHandler;
 import jetpacks.handlers.KeybindForgeBusHandler;
@@ -58,7 +57,7 @@ public class SimplyJetpacks {
         }
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new JetpackCraftingEvents());
+//        MinecraftForge.EVENT_BUS.register(new JetpackCraftingEvents());
         MinecraftForge.EVENT_BUS.register(new CommonJetpackHandler());
 //        MinecraftForge.EVENT_BUS.register(new SJSounds());
 

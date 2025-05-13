@@ -15,7 +15,6 @@ public class KeybindModBusHandler {
 
     @SubscribeEvent
     public static void registerBindings(RegisterKeyMappingsEvent event) {
-        SimplyJetpacks.LOGGER.info("REGISTERING KEY MAP EVENT HERE");
         KeybindForgeBusHandler.JETPACK_GUI_KEY = new KeyMapping("keybind.simplyjetpacks.jetpack_gui", GLFW.GLFW_KEY_K, "keybind.simplyjetpacks.category");
         event.register(KeybindForgeBusHandler.JETPACK_GUI_KEY);
         KeybindForgeBusHandler.JETPACK_ENGINE_KEY = new KeyMapping("keybind.simplyjetpacks.jetpack_engine", GLFW.GLFW_KEY_J, "keybind.simplyjetpacks.category");

@@ -2,14 +2,6 @@ package jetpacks.config;
 
 public class ConfigDefaults {
 
-    // Mod Integration
-    public static final boolean enableIntegrationVanilla = true;
-    public static final boolean enableIntegrationImmersiveEngineering = true;
-    public static final boolean enableIntegrationMekanism = true;
-    public static final boolean enableIntegrationEnderIO = true;
-    public static final boolean enableIntegrationThermalExpansion = true;
-    public static final boolean enableIntegrationThermalDynamics = true;
-
     // Controls
     public static final boolean invertHoverSneakingBehavior = false;
 
@@ -33,7 +25,6 @@ public class ConfigDefaults {
 
     // Misc
     public static final boolean enableJetpackParticles = true;
-    public static final boolean enableJoinAdvancements = true;
 
     public enum HUDPosition {
         TOP_LEFT,

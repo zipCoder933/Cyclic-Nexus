@@ -123,7 +123,7 @@ public class JetpackScreen extends Screen {
                 break;
         }
 
-        if (jetpackItem.isCreative()) {
+        if (jetpackItem.isCreative) {
             graphics.blit(JETPACK_TEXTURE, relX + 10, relY + 16, 70, 178, 14, 78);
         } else {
             graphics.blit(JETPACK_TEXTURE, relX + 10, relY + 16, barX, 178, 14, 78);
@@ -140,7 +140,7 @@ public class JetpackScreen extends Screen {
         if (mouseX >= relX + 10 && mouseY >= relY + 16 && mouseX < relX + 10 + 14 && mouseY < relY + 16 + 78) {
             Component text;
             //text = SJTextUtil.energyWithMax(jetpackItem.getEnergy(jetpackStack), jetpackItem.getCapacity(jetpackStack));
-            if (jetpackItem.isCreative()) {
+            if (jetpackItem.isCreative) {
                 text = SJTextUtil.translate("tooltip", "infiniteEnergy", ChatFormatting.LIGHT_PURPLE);
             } else if (jetpackItem.getEnergy(jetpackStack) == 0) {
                 text = SJTextUtil.translate("hud", "energyDepleted", ChatFormatting.RED);
@@ -156,7 +156,7 @@ public class JetpackScreen extends Screen {
         Item item = jetpackStack.getItem();
         if (item instanceof JetpackItem) {
             JetpackItem jetpack = (JetpackItem) item;
-            if (jetpack.isCreative()) {
+            if (jetpack.isCreative) {
                 return 78;
             }
             int i = jetpack.getEnergy(jetpackStack);
