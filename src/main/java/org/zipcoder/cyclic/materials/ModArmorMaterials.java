@@ -11,32 +11,71 @@ import org.zipcoder.cyclic.sound.SoundRegistry;
 
 import java.util.function.Supplier;
 
+//net.minecraft.world.item.ArmorMaterials
 public enum ModArmorMaterials implements ArmorMaterial {
 
     GLOW_ARMOR("glowing",
             60, // durability
-            new int[]{ 2, // head protection
-                    5, 3, 1,},
+            new int[]{
+                    2, // head protection
+                    5,
+                    3,
+                    1,},
             10, // enchantability
             SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
             1F, // toughness
             0F, // knockback resistance
             () -> Ingredient.of(Items.GOLD_INGOT)), // repair material
 
+    /**
+     *  LEATHER("leather", 5, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266652_) -> {
+     *         p_266652_.put(Type.BOOTS, 1);
+     *         p_266652_.put(Type.LEGGINGS, 2);
+     *         p_266652_.put(Type.CHESTPLATE, 3);
+     *         p_266652_.put(Type.HELMET, 1);
+     *     }), 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+     *         return Ingredient.of(new ItemLike[]{Items.LEATHER});
+     *     }),
+     *     CHAIN("chainmail", 15, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266651_) -> {
+     *         p_266651_.put(Type.BOOTS, 1);
+     *         p_266651_.put(Type.LEGGINGS, 4);
+     *         p_266651_.put(Type.CHESTPLATE, 5);
+     *         p_266651_.put(Type.HELMET, 2);
+     *     }), 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> {
+     *         return Ingredient.of(new ItemLike[]{Items.IRON_INGOT});
+     *     }),
+     *     IRON("iron", 15, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266654_) -> {
+     *         p_266654_.put(Type.BOOTS, 2);
+     *         p_266654_.put(Type.LEGGINGS, 5);
+     *         p_266654_.put(Type.CHESTPLATE, 6);
+     *         p_266654_.put(Type.HELMET, 2);
+     *     }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+     *         return Ingredient.of(new ItemLike[]{Items.IRON_INGOT});
+     *     }),
+     *     GOLD("gold", 7, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266650_) -> {
+     *         p_266650_.put(Type.BOOTS, 1);
+     *         p_266650_.put(Type.LEGGINGS, 3);
+     *         p_266650_.put(Type.CHESTPLATE, 5);
+     *         p_266650_.put(Type.HELMET, 2);
+     *     }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> {
+     *         return Ingredient.of(new ItemLike[]{Items.GOLD_INGOT});
+     *     }),
+     */
+
     //ArmorMaterials.GOLD.getDurabilityForType(ArmorItem.Type.HELMET)
     //Emerald is gold but with a higher durability, toughness and enchantment value
     EMERALD_ARMOR("emerald",
             25, // durability
             new int[]{ // protection
-                    2, // helmtet
-                    5, // chestplate
-                    3, // leggings
-                    1, // boots
+                    3, // helmtet
+                    6, // chestplate
+                    4, // leggings
+                    2, // boots
             },
             30, // enchantability
             SoundRegistry.EQUIP_EMERALD.get(), // equip sound
             0.25F, // toughness
-            0F, // knockback resistance
+            0.2F, // knockback resistance
             () -> Ingredient.of(Items.EMERALD_BLOCK)); // repair material
 
     private final String name;

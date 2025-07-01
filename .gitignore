@@ -24,4 +24,5 @@ gradle-app.setting
 /run/
 /run
 /.idea/
-*.json~
+*.*~
+src/main/java/org/zipcoder/cyclic/materials/ModArmorMaterials.java~
