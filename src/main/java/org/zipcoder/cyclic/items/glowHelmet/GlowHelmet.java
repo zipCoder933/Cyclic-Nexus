@@ -9,7 +9,7 @@ public class GlowHelmet extends ArmorItem {
 
     public GlowHelmet() {
         super(
-                ModArmorMaterials.GLOW_ARMOR,//Armor material
+                ModArmorMaterials.COPPER_ARMOR,//Armor material
                 Type.HELMET, //Type
                 new Item.Properties().stacksTo(1)); //Properties
     }

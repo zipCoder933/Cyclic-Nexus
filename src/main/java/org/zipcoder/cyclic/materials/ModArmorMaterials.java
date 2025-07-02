@@ -14,18 +14,6 @@ import java.util.function.Supplier;
 //net.minecraft.world.item.ArmorMaterials
 public enum ModArmorMaterials implements ArmorMaterial {
 
-    GLOW_ARMOR("glowing",
-            60, // durability
-            new int[]{
-                    2, // head protection
-                    5,
-                    3,
-                    1,},
-            10, // enchantability
-            SoundEvents.ARMOR_EQUIP_DIAMOND, // equip sound
-            1F, // toughness
-            0F, // knockback resistance
-            () -> Ingredient.of(Items.GOLD_INGOT)), // repair material
 
     /**
      *  LEATHER("leather", 5, (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (p_266652_) -> {
@@ -63,16 +51,31 @@ public enum ModArmorMaterials implements ArmorMaterial {
      */
 
     //ArmorMaterials.GOLD.getDurabilityForType(ArmorItem.Type.HELMET)
+
+
+    COPPER_ARMOR("copper",
+            15, // durability
+            new int[]{
+                    1,// helmtet
+                    3,// chestplate
+                    2,// leggings
+                    1,},// boots
+            10, // enchantability
+            SoundEvents.ARMOR_EQUIP_GENERIC, // equip sound
+            0F, // toughness
+            0F, // knockback resistance
+            () -> Ingredient.of(Items.COPPER_INGOT)), // repair material
+
     //Emerald is gold but with a higher durability, toughness and enchantment value
     EMERALD_ARMOR("emerald",
             25, // durability
             new int[]{ // protection
-                    3, // helmtet
+                    2, // helmet
                     6, // chestplate
-                    4, // leggings
-                    2, // boots
+                    4, // leggings (iron-1)
+                    1, // boots (iron-1)
             },
-            30, // enchantability
+            35, // enchantability
             SoundRegistry.EQUIP_EMERALD.get(), // equip sound
             0.25F, // toughness
             0.2F, // knockback resistance

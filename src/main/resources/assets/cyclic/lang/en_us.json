@@ -666,10 +666,12 @@
   "item.dynamite_safe": "Combat Dynamite",
   "item.dynamite_safe.tooltip": "Does not break blocks or hurt players",
   "subtitles.item.armor.equip_emerald": "Emerald armor clangs",
+
   "item.cyclic.emerald_boots": "Emerald Boots",
   "item.cyclic.emerald_chestplate": "Emerald Chestplate",
   "item.cyclic.emerald_helmet": "Emerald Helmet",
   "item.cyclic.emerald_leggings": "Emerald Leggings",
+
   "item.cyclic.emerald_pickaxe": "Emerald Pickaxe",
   "item.cyclic.emerald_shovel": "Emerald Shovel",
   "item.cyclic.emerald_axe": "Emerald Axe",
@@ -680,6 +682,11 @@
   "item.cyclic.copper_axe": "Copper Axe",
   "item.cyclic.copper_hoe": "Copper Hoe",
   "item.cyclic.copper_sword": "Copper Sword",
+  "item.cyclic.copper_boots": "Copper Boots",
+  "item.cyclic.copper_chestplate": "Copper Chestplate",
+  "item.cyclic.copper_helmet": "Copper Helmet",
+  "item.cyclic.copper_leggings": "Copper Leggings",
+
   "item.cyclic.amethyst_pickaxe": "Amethyst Pickaxe",
   "item.cyclic.amethyst_shovel": "Amethyst Shovel",
   "item.cyclic.amethyst_axe": "Amethyst Axe",
