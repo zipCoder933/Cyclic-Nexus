@@ -135,7 +135,6 @@ public class ItemRegistry {
             event.accept(ItemRegistry.SHIELD_OBSIDIAN);
             event.accept(ItemRegistry.SHIELD_NETHERITE);
 
-
             event.accept(ItemRegistry.COPPER_BOOTS);
             event.accept(ItemRegistry.COPPER_HELMET);
             event.accept(ItemRegistry.COPPER_CHESTPLATE);

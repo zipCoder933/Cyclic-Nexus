@@ -17,13 +17,14 @@ import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 public class ModToolMaterials {
 
     //Comes after stone
+    //Copper tools have iron speed but stone durability
     public static final Tier COPPER = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
             //Tiers.STONE
             new ForgeTier(
                     1,
-                    231,
-                    Tiers.STONE.getSpeed(),
+                    200,
+                    Tiers.IRON.getSpeed(),
                     1.0F,
                     8,
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_copper_tool")),
@@ -53,7 +54,7 @@ public class ModToolMaterials {
             //Tiers.IRON
             new ForgeTier(
                     2,
-                    500,
+                    1000,
                     Tiers.IRON.getSpeed(),
                     2.0F,
                     26,
@@ -63,15 +64,16 @@ public class ModToolMaterials {
             List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 
 
+    //Emerald tools have gold speed (fast) and almost diamond durability
     public static final Tier EMERALD = TierSortingRegistry.registerTier(
             //harvestLevel, uses, toolSpeed, damage, enchantability
 //            Tiers.GOLD
             new ForgeTier(
                     0,
-                    1561,
-                    8.0F,
+                    (int) (Tiers.DIAMOND.getUses() * 0.75f),
+                    12.0F,
                     0.0F,
-                    22,
+                    15,
 
                     BlockTags.create(new ResourceLocation(MOD_ID, "needs_emerald_tool")),
                     () -> Ingredient.of(Items.EMERALD)),//Repair
