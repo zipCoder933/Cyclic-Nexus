@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.zipcoder.cyclic.Cyclic;
 import org.zipcoder.cyclic.blocks.BlockRegistry;
 import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
+import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.items.shield.ShieldCyclicItem;
 import org.zipcoder.cyclic.materials.ModArmorMaterials;
 import org.zipcoder.cyclic.materials.ModToolMaterials;
@@ -47,6 +48,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
 
+    public static final RegistryObject<Item> GLOW_HELMET = ITEMS.register("glow_helmet", () -> new GlowHelmet());
 
     //Amethyst tools
     public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModToolMaterials.AMETHYST, 0, -2.9f, new Item.Properties()));
@@ -167,7 +169,7 @@ public class ItemRegistry {
             event.accept(ItemRegistry.EMERALD_PICKAXE);
             event.accept(ItemRegistry.EMERALD_AXE);
 
-//            event.accept(ItemRegistry.GLOW_HELMET);
+            event.accept(ItemRegistry.GLOW_HELMET);
 
         } else if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ItemRegistry.SCAFFOLD_FRAGILE);
