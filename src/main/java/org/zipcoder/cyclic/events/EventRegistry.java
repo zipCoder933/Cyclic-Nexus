@@ -1,10 +1,9 @@
 package org.zipcoder.cyclic.events;
 
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.zipcoder.cyclic.items.shield.MaterialShieldRegistry;
-import org.zipcoder.cyclic.potions.PotionsRegistry;
+import org.zipcoder.cyclic.PotionsRegistry;
 
 public class EventRegistry {
     public static void setup(final FMLCommonSetupEvent event) {

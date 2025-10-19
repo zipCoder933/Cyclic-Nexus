@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.config;
+package org.zipcoder.cyclic.blocks;
 
 import com.electronwill.nightconfig.core.file.FileConfig;
 import com.electronwill.nightconfig.toml.TomlFormat;

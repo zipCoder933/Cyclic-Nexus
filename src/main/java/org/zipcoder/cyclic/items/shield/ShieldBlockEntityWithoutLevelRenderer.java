@@ -7,27 +7,18 @@ import net.minecraft.client.model.ShieldModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.blockentity.BannerRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.core.Holder;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ShieldItem;
-import net.minecraft.world.level.block.entity.BannerBlockEntity;
-import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterClientReloadListenersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.zipcoder.cyclic.items.ItemRegistry;
-import com.mojang.datafixers.util.Pair;
+import org.zipcoder.cyclic.ItemRegistry;
 import org.zipcoder.cyclic.utils.mixin.I_BlockEntityWithoutLevelRenderer;
-
-import java.util.List;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 

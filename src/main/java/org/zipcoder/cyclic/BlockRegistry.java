@@ -1,9 +1,8 @@
-package org.zipcoder.cyclic.blocks;
+package org.zipcoder.cyclic;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.ScaffoldingBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,7 +11,6 @@ import org.zipcoder.cyclic.blocks.angelScaffolding.BlockScaffolding;
 import org.zipcoder.cyclic.blocks.angelScaffolding.BlockScaffoldingResponsive;
 import org.zipcoder.cyclic.blocks.spikes.EnumSpikeType;
 import org.zipcoder.cyclic.blocks.spikes.SpikesBlock;
-import org.zipcoder.cyclic.items.ItemRegistry;
 
 import java.util.function.Supplier;
 

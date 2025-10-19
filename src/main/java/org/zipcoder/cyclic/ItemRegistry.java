@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.items;
+package org.zipcoder.cyclic;
 
 import net.minecraft.world.item.*;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -6,8 +6,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.zipcoder.cyclic.Cyclic;
-import org.zipcoder.cyclic.blocks.BlockRegistry;
 import org.zipcoder.cyclic.blocks.angelScaffolding.ItemScaffolding;
 import org.zipcoder.cyclic.items.glowHelmet.GlowHelmet;
 import org.zipcoder.cyclic.items.shield.ShieldCyclicItem;
@@ -81,17 +79,6 @@ public class ItemRegistry {
     public static final RegistryObject<Item> SPIKES_IRON = ITEMS.register("spikes_iron", () -> new BlockItem(BlockRegistry.SPIKES_IRON.get(), new Item.Properties()));
     public static final RegistryObject<Item> SPIKES_CURSE = ITEMS.register("spikes_curse", () -> new BlockItem(BlockRegistry.SPIKES_CURSE.get(), new Item.Properties()));
     public static final RegistryObject<Item> SPIKES_FIRE = ITEMS.register("spikes_fire", () -> new BlockItem(BlockRegistry.SPIKES_FIRE.get(), new Item.Properties()));
-
-
-//    public static final RegistryObject<Item> CRYSTAL_BOOTS = ITEMS.register("crystal_boots", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.BOOTS, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_HELMET = ITEMS.register("crystal_helmet", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.HELMET, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_CHESTPLATE = ITEMS.register("crystal_chestplate", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_LEGGINGS = ITEMS.register("crystal_leggings", () -> new ArmorItem(MaterialRegistry.ArmorMats.GEMOBSIDIAN, ArmorItem.Type.LEGGINGS, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_SHOVEL = ITEMS.register("crystal_shovel", () -> new ShovelItem(ModToolMaterials.GEMOBSIDIAN, 1.5F, -3.0F, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_HOE = ITEMS.register("crystal_hoe", () -> new HoeItem(ToolMats.GEMOBSIDIAN, -4, 0F, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_SWORD = ITEMS.register("crystal_sword", () -> new SwordItem(ModToolMaterials.GEMOBSIDIAN, 3, -2.4F, (new Item.Properties())));
-//    public static final RegistryObject<Item> CRYSTAL_PICKAXE = ITEMS.register("crystal_pickaxe", () -> new PickaxeItem(ModToolMaterials.GEMOBSIDIAN, 1, -2.8F, new Item.Properties()));
-//    public static final RegistryObject<Item> CRYSTAL_AXE = ITEMS.register("crystal_axe", () -> new AxeItem(ModToolMaterials.GEMOBSIDIAN, 5.0F, -3.0F, new Item.Properties()));
 
     //Shields (Basically just regular shields with more durability)
     //A vanilla shield has 336 durability

@@ -1,4 +1,4 @@
-package org.zipcoder.cyclic.potions;
+package org.zipcoder.cyclic;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.zipcoder.cyclic.effects.EffectRegistry;
-import org.zipcoder.cyclic.items.ItemRegistry;
+import org.zipcoder.cyclic.potions.BrewingRecipe;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 import static org.zipcoder.cyclic.Cyclic.preInit;

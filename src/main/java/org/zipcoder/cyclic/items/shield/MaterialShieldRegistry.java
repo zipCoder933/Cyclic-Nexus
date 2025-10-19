@@ -4,7 +4,7 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
-import org.zipcoder.cyclic.items.ItemRegistry;
+import org.zipcoder.cyclic.ItemRegistry;
 
 import static org.zipcoder.cyclic.Cyclic.MOD_ID;
 
