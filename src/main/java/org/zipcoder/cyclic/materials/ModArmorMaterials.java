@@ -16,6 +16,18 @@ import net.minecraft.world.item.ArmorMaterials;
 //net.minecraft.world.item.ArmorMaterials
 public enum ModArmorMaterials implements ArmorMaterial {
 
+    //Glow
+    GLOWING_ARMOR("glowing", 5, // durability
+            new int[]{ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet
+                    5,// chestplate
+                    ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.LEGGINGS),// leggings
+                    ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.BOOTS), // boots
+            }, 12, // enchantability
+            SoundEvents.ARMOR_EQUIP_GENERIC, // equip sound
+            0.3F, // toughness
+            0F, // knockback resistance
+            () -> Ingredient.of(Items.COPPER_INGOT)),
+
     //Copper has iron protection but leather durability
     COPPER_ARMOR("copper", 5, // durability
             new int[]{ArmorMaterials.IRON.getDefenseForType(ArmorItem.Type.HELMET),// helmtet

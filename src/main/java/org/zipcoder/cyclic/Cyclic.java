@@ -16,6 +16,7 @@ import org.zipcoder.cyclic.blocks.PreInitConfig;
 import org.zipcoder.cyclic.effects.EffectRegistry;
 import org.zipcoder.cyclic.enchantments.EnchantmentRegistry;
 import org.zipcoder.cyclic.events.EventRegistry;
+import org.zipcoder.cyclic.network.NetworkHandler;
 import org.zipcoder.cyclic.sound.SoundRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -49,6 +50,7 @@ public class Cyclic {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        NetworkHandler.registerMessages();
     }
 
     // Add the example block item to the building blocks tab

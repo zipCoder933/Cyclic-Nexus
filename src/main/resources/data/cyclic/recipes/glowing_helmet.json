@@ -2,15 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " i ",
-    "ioi",
+    "iOi",
     "o o"
   ],
   "key": {
     "i": {
       "item": "minecraft:gold_ingot"
     },
-    "o": {
+    "O": {
       "item": "minecraft:glowstone"
+    },
+    "o": {
+      "item": "minecraft:glowstone_dust"
     }
   },
   "result": {

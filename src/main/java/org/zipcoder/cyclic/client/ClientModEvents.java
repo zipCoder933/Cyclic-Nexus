@@ -36,10 +36,10 @@ public class ClientModEvents {
     public static void onKeyInput(InputEvent.Key event) {
         if (KEY_TOGGLE_NIGHT_VISION.consumeClick()) {
             if (ClientGameSettings.getGamma() > 1.0D) {
-                GlowHelmet.enableNightVision();
+                GlowHelmet.setNightVision(true);
                 org.zipcoder.cyclic.client.utils.ClientUtils.showToast("Night Vision", "Night Vision Disabled");
             } else {
-                GlowHelmet.disableNightVision();
+                GlowHelmet.setNightVision(false);
                 org.zipcoder.cyclic.client.utils.ClientUtils.showToast("Night Vision", "Night Vision Enabled");
             }
         }
